@@ -1,0 +1,9 @@
+{
+  "name": "just-repair",
+  "scripts": {
+    "start": "npx tailwindcss -i ./assets/css/index.css -o ./assets/css/tailwind.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}
