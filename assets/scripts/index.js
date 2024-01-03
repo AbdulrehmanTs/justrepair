@@ -75,7 +75,7 @@ $(document).ready(function () {
 
 const openSmMenu = () => {
   document.getElementById("menu").classList.remove("-translate-x-full");
-  document.getElementById("menu").classList.add("translate-x-full");
+  document.getElementById("menu").classList.add("translate-x-0");
   // animations
   gsap.from(".sm-menu-link", {
     opacity: 0,
@@ -107,17 +107,17 @@ const openSmMenu = () => {
 };
 const closeSmMenu = () => {
   document.getElementById("menu").classList.add("-translate-x-full");
-  document.getElementById("menu").classList.remove("translate-x-full");
+  document.getElementById("menu").classList.remove("translate-x-0");
 };
 openMenu = () => {
   document
     .getElementById("menu-hoverly")
-    .classList.remove("bg-gray-800/0", "pointer-events-none");
+    .classList.remove("bg-gray-800/0","pointer-events-none");
   document
     .getElementById("menu-hoverly")
     .classList.add("bg-gray-800/70", "pointer-events-auto");
   document.getElementById("md-menu").classList.remove("-translate-x-full");
-  document.getElementById("md-menu").classList.add("translate-x-full");
+  document.getElementById("md-menu").classList.add("translate-x-0");
 
   // animations
   gsap.from(".md-menu-link", {
@@ -158,6 +158,24 @@ closeMenu = () => {
   document.getElementById("md-menu").classList.add("-translate-x-full");
   document.getElementById("md-menu").classList.remove("translate-x-full");
 };
+
+// stick header to top
+document.onscroll = () => {
+  let header = document.querySelector('.stiky-header');
+  let headerParent = document.querySelector('.header-parent');
+  // headerParent.style.height = 
+  console.log(header.style.height);
+  let body = document.querySelector('body');
+  if (window.scrollY > headerParent.offsetTop) {
+    header.classList.add("fixed", "top-0", "shadow-md", "z-10")
+    body.style.paddingTop = header.offsetHeight + "px";
+  } else {
+    header.classList.remove("fixed", "top-0", "shadow-md", "z-10")
+    body.style.paddingTop = 0
+  }
+  
+};
+
 
 // Flip cards
 function flipCard(index) {
