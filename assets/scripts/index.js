@@ -163,19 +163,22 @@ closeMenu = () => {
 document.onscroll = () => {
   let header = document.querySelector('.stiky-header');
   let headerParent = document.querySelector('.header-parent');
-  // headerParent.style.height = 
-  console.log(header.style.height);
   let body = document.querySelector('body');
   if (window.scrollY > headerParent.offsetTop) {
-    header.classList.add("fixed", "top-0", "shadow-md", "z-10")
+    header.classList.remove("p-4", "md:p-6")
+    header.classList.add("fixed", "top-0", "shadow-md", "z-10", "p-2", "md:p-4")
     body.style.paddingTop = header.offsetHeight + "px";
   } else {
-    header.classList.remove("fixed", "top-0", "shadow-md", "z-10")
+    header.classList.add("p-4", "md:p-6")
+    header.classList.remove("fixed", "top-0", "shadow-md", "z-10", "p-2", "md:p-4")
     body.style.paddingTop = 0
   }
   
 };
 
+// Footer Year set
+document.querySelector('.footer-year').innerHTML = new Date().getFullYear();
+// 
 
 // Flip cards
 function flipCard(index) {
