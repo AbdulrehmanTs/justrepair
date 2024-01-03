@@ -1,102 +1,318 @@
-// initialize Animon Animation
-Animon.animon();
-
 // Slick Slider settings
 $(document).ready(function () {
-  var slides = $('.fade > div');
+  const slides = [...document.querySelectorAll(".fade > div")];
+  gsap.from(".title", {
+    x: -300,
+    duration: 1,
+  });
+  gsap.from(".description", {
+    x: -300,
+    duration: 1,
+  });
+  gsap.from(".slide-image", {
+    x: "100%",
+    duration: 1,
+  });
 
-  $(".fade").slick({
-    infinite: true,
-    speed: 1000,
-    fade: true,
-    cssEase: "linear",
-    dots: true,
-    autoplay: true,
-    arrows: false,
-  })
-  // .on("beforeChange", function (event, slick, currentSlide, nextSlide) {
-  //   $(".title").removeClass("animonItem").hide();
-  //   $(".description").removeClass("animonItem").hide();
-  //   $(".cta-btn").removeClass("animonItem").hide();
-  //   $(".slide-image").removeClass("animonItem").hide();
-  //   setTimeout(() => {
-  //     $('.title').addClass('animonItem').show();
-  //     $('.description').addClass('animonItem').show();
-  //     $('.cta-btn').addClass('animonItem').show();
-  //     $('.slide-image').addClass('animonItem').show();
-  //   }, 1000);
-  // });
- 
+  let i = 0;
+  let speed = 100;
+  let title = slides[0].querySelector(".title").children[0].innerHTML;
+  slides[0].querySelector(".title").children[0].innerHTML = "";
+  function typeWriter() {
+    if (i < title.length) {
+      slides[0].querySelector(".title").children[0].innerHTML +=
+        title.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed);
+    }
+  }
 
-  $(".counter").counterUp({ time: 3000, delay: 10 });
+  typeWriter();
+  // console.log(slides[0].children[0].children[0].children[0])
+
+  $(".fade")
+    .slick({
+      infinite: true,
+      speed: 500,
+      cssEase: "linear",
+      fade: true,
+      dots: true,
+      autoplay: true,
+      arrows: false,
+    })
+    .on("beforeChange", function (event, slick, currentSlide, nextSlide) {
+      const headerColors = [
+        "#be185d",
+        "#4338ca",
+        "#7e22ce",
+        "#be123c",
+        "#0e7490",
+        "#047857",
+        "#5b21b6",
+      ];
+      document
+        .querySelector(":root")
+        .style.setProperty("--header-bg-color", headerColors[nextSlide]);
+      let title =
+        slides[nextSlide].querySelector(".title").children[0].innerHTML;
+      slides[nextSlide].querySelector(".title").children[0].innerHTML = "";
+      let i = 0;
+      let speed = 100;
+      function typeWriter() {
+        if (i < title.length) {
+          slides[nextSlide].querySelector(".title").children[0].innerHTML +=
+            title.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        }
+      }
+      typeWriter();
+
+      
+    });
+    $(".counter").counterUp({ time: 2000 });
 });
 
 const openSmMenu = () => {
-  document.getElementById("menu").classList.remove("hidden");
-  document.getElementById("menu").classList.add("flex");
+  document.getElementById("menu").classList.remove("-translate-x-full");
+  document.getElementById("menu").classList.add("translate-x-full");
+  // animations
+  gsap.from(".sm-menu-link", {
+    opacity: 0,
+    y: 100,
+    duration: 0.3,
+    ease: "back.inOut",
+    stagger: "0.2",
+  });
+  //
+  gsap.from(".sm-logo", {
+    opacity: 0,
+    scale: 0,
+    x: -100,
+    duration: 0.5,
+    delay: 0.5,
+    ease: "back.inOut",
+  });
+
+  //
+  gsap.from(".sm-cta-btn", {
+    opacity: 0,
+    scale: 0,
+    x: -100,
+    duration: 0.5,
+    delay: 0.5,
+    ease: "back.inOut",
+    stagger: 0.2,
+  });
 };
 const closeSmMenu = () => {
-  document.getElementById("menu").classList.add("hidden");
-  document.getElementById("menu").classList.remove("flex");
+  document.getElementById("menu").classList.add("-translate-x-full");
+  document.getElementById("menu").classList.remove("translate-x-full");
 };
 openMenu = () => {
-  document.getElementById("md-menu").classList.add("md:block");
+  document
+    .getElementById("menu-hoverly")
+    .classList.remove("bg-gray-800/0", "pointer-events-none");
+  document
+    .getElementById("menu-hoverly")
+    .classList.add("bg-gray-800/70", "pointer-events-auto");
+  document.getElementById("md-menu").classList.remove("-translate-x-full");
+  document.getElementById("md-menu").classList.add("translate-x-full");
+
+  // animations
+  gsap.from(".md-menu-link", {
+    opacity: 0,
+    y: 100,
+    duration: 0.3,
+    ease: "back.inOut",
+    stagger: "0.2",
+  });
+  //
+  gsap.from(".md-logo", {
+    opacity: 0,
+    scale: 0,
+    x: -100,
+    duration: 0.5,
+    delay: 0.5,
+    ease: "back.inOut",
+  });
+
+  //
+  gsap.from(".md-cta-btn", {
+    opacity: 0,
+    scale: 0,
+    x: -100,
+    duration: 0.5,
+    delay: 0.5,
+    ease: "back.inOut",
+    stagger: 0.2,
+  });
 };
 closeMenu = () => {
-  document.getElementById("md-menu").classList.remove("md:block");
+  document
+    .getElementById("menu-hoverly")
+    .classList.add("bg-gray-800/0", "pointer-events-none");
+  document
+    .getElementById("menu-hoverly")
+    .classList.remove("bg-gray-800/70", "pointer-events-auto");
+  document.getElementById("md-menu").classList.add("-translate-x-full");
+  document.getElementById("md-menu").classList.remove("translate-x-full");
 };
 
-let slides2 = document.querySelectorAll(".slide-ana2>div");
-let slideSayisi2 = slides2.length;
-
-for (let index = 0; index < slides2.length; index++) {
-  const element = slides2[index];
-  element.style.transform = "translateX(" + 100 * index + "%)";
-}
-let loop2 = 0 + 1000 * slideSayisi2;
-
-function nextTest() {
-  loop2++;
-  for (let index = 0; index < slides2.length; index++) {
-    const element = slides2[index];
-    element.style.transform =
-      "translateX(" + 200 * (index - (loop2 % slideSayisi2)) + "%)";
-  }
+// Flip cards
+function flipCard(index) {
+  const cards = document.querySelectorAll(".flip-card");
+  let inner = cards[index].querySelector(".flip-card-inner");
+  inner.style.transform = "rotateY(180deg)";
 }
 
-function prevTest() {
-  loop2--;
-  for (let index = 0; index < slides2.length; index++) {
-    const element = slides2[index];
-    element.style.transform =
-      "translateX(" + 200 * (index - (loop2 % slideSayisi2)) + "%)";
-  }
+function flipCardBack(index) {
+  const cards = document.querySelectorAll(".flip-card");
+  let inner = cards[index].querySelector(".flip-card-inner");
+  inner.style.transform = "rotateY(0deg)";
+}
+// Flip cards end
+
+// Smoth scrolling
+const lenis = new Lenis();
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
 }
 
-// Scrolling Slides
-var sliderContainer = document.getElementById("slider-container");
+requestAnimationFrame(raf);
 
-var nextBtn = document.getElementById("next-btn");
-nextBtn.onclick = function () {
-  sideScroll(sliderContainer, "right", 20, 360, 30);
-};
+document.addEventListener("DOMContentLoaded", function () {
+  // scroll plugin
+  gsap.registerPlugin(ScrollTrigger);
 
-var backBtn = document.getElementById("back-btn");
-backBtn.onclick = function () {
-  sideScroll(sliderContainer, "left", 20, 360, 30);
-};
+  // make animations
+  const fadeInLeftElems = gsap.utils.toArray(".fadeInLeft");
+  fadeInLeftElems.forEach((elem) => {
+    gsap.from(elem, {
+      opacity: 0,
+      x: -100,
+      duration: 1,
+      ease: "power2.inOut",
+      scrollTrigger: {
+        trigger: elem,
+        toggleActions: "restart none none none",
+      },
+    });
+  });
 
-function sideScroll(element, direction, speed, distance, step) {
-  scrollAmount = 0;
-  var slideTimer = setInterval(function () {
-    if (direction == "left") {
-      element.scrollLeft -= step;
-    } else {
-      element.scrollLeft += step;
+  //
+  const fadeInRightElems = gsap.utils.toArray(".fadeInRight");
+  fadeInRightElems.forEach((elem) => {
+    gsap.from(elem, {
+      opacity: 0,
+      x: 100,
+      duration: 1,
+      ease: "power2.inOut",
+      scrollTrigger: {
+        trigger: elem,
+        toggleActions: "restart none none none",
+      },
+    });
+  });
+
+  //
+  const fadeInUpElems = gsap.utils.toArray(".fadeInUp");
+  fadeInUpElems.forEach((elem) => {
+    gsap.from(elem, {
+      opacity: 0,
+      y: 100,
+      duration: 1,
+      ease: "power2.inOut",
+      scrollTrigger: {
+        trigger: elem,
+        toggleActions: "restart none none none",
+      },
+    });
+  });
+
+  //
+  const fadeInDownElems = gsap.utils.toArray(".fadeInDown");
+  fadeInDownElems.forEach((elem) => {
+    gsap.from(elem, {
+      opacity: 0,
+      y: -100,
+      duration: 1,
+      ease: "power2.inOut",
+      scrollTrigger: {
+        trigger: elem,
+        toggleActions: "restart none none none",
+      },
+    });
+  });
+
+  //
+  const scaleUpElems = gsap.utils.toArray(".scaleUp");
+  scaleUpElems.forEach((elem) => {
+    gsap.from(elem, {
+      opacity: 0,
+      scale: 0,
+      duration: 1,
+      ease: "power2.inOut",
+      scrollTrigger: {
+        trigger: elem,
+        toggleActions: "restart none none none",
+      },
+    });
+  });
+
+  //
+  const scaleDownElems = gsap.utils.toArray(".scaleDown");
+  scaleDownElems.forEach((elem) => {
+    gsap.from(elem, {
+      opacity: 0,
+      scale: 0,
+      duration: 1,
+      ease: "power2.inOut",
+      scrollTrigger: {
+        trigger: elem,
+        toggleActions: "restart none none none",
+      },
+    });
+  });
+
+  gsap.from(".flip-card", {
+    opacity: 0,
+    x: 100,
+    duration: 1,
+    ease: "power2.inOut",
+    stagger: "0.5",
+    scrollTrigger: {
+      trigger: ".flip-card",
+      toggleActions: "restart none none none",
+    },
+  });
+
+
+  gsap.from(".logo", {
+    scale: 0,
+    x: -100,
+    duration: 0.5,
+    ease: "back.inOut",
+    stagger: "0.2",
+  });
+  gsap.from(".menu-link", {
+    opacity: 0,
+    y: 100,
+    duration: 0.3,
+    ease: "back.inOut",
+    stagger: "0.2",
+  });
+
+  gsap.from(".feature", {
+    opacity: 0,
+    y: 100,
+    duration: 0.3,
+    ease: "back.inOut",
+    stagger: "0.2",
+    scrollTrigger: {
+      trigger: ".feature",
+      toggleActions: "restart none none none",
     }
-    scrollAmount += step;
-    if (scrollAmount >= distance) {
-      window.clearInterval(slideTimer);
-    }
-  }, speed);
-}
+  });
+});
