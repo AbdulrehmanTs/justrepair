@@ -1896,41 +1896,27 @@ select {
   color: #fbbf24;
 }
 
-/* Flip Card */
+/* menu link */
 
-/* .flip-card {
-  perspective: 1000px;
-  width: 300px;
-  height: 300px;
-  background-color: transparent;
-}
-
-.flip-card-inner {
+.menu-link {
   position: relative;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-card-front,
-.flip-card-back {
+.menu-link::after {
+  content: "";
   position: absolute;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+  bottom: -4px;
+  left: 0;
+  width: 0px;
+  height: 4px;
+  border-radius: 12px;
+  background-color: #f97316;
+  transition: 0.3s;
 }
 
-.flip-card-front {
-  color: black;
+.menu-link:hover::after {
+  width: 70%;
 }
-
-.flip-card-back {
-  background-color: #2980b9;
-  transform: rotateY(180deg);
-} */
 
 .flip-card {
   perspective: 1000px;
@@ -2026,6 +2012,11 @@ select {
 .hover\:text-orange-900:hover {
   --tw-text-opacity: 1;
   color: rgb(124 45 18 / var(--tw-text-opacity));
+}
+
+.hover\:text-orange-500:hover {
+  --tw-text-opacity: 1;
+  color: rgb(249 115 22 / var(--tw-text-opacity));
 }
 
 .hover\:underline:hover {
@@ -2658,19 +2649,7 @@ select {
     margin-top: 3rem;
   }
 
-  .\32xl\:h-full {
-    height: 100%;
-  }
-
   .\32xl\:h-auto {
     height: auto;
-  }
-
-  .\32xl\:h-\[1500px\] {
-    height: 1500px;
-  }
-
-  .\32xl\:h-\[1000px\] {
-    height: 1000px;
   }
 }
