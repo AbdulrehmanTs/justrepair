@@ -42,6 +42,7 @@ $(document).ready(function () {
       dots: false,
       autoplay: true,
       arrows: false,
+      autoplaySpeed: 5000,
     })
     .on("beforeChange", function (event, slick, currentSlide, nextSlide) {
       // const headerColors = [
