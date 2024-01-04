@@ -2657,4 +2657,20 @@ select {
   .\32xl\:mt-12 {
     margin-top: 3rem;
   }
+
+  .\32xl\:h-full {
+    height: 100%;
+  }
+
+  .\32xl\:h-auto {
+    height: auto;
+  }
+
+  .\32xl\:h-\[1500px\] {
+    height: 1500px;
+  }
+
+  .\32xl\:h-\[1000px\] {
+    height: 1000px;
+  }
 }
