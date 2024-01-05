@@ -377,6 +377,118 @@ document.addEventListener("DOMContentLoaded", function () {
     ease: "back.inOut",
     stagger: 0.2,
   });
+
+  // linegrow animations
+  gsap.from(".line", {
+    scrollTrigger: {
+      trigger: ".line",
+      scrub: true,
+      start: "top center",
+      end: "+=1000"
+    },
+    markers: true,
+    scaleY: 0,
+    ease: "none"
+  });
+
+  // 
+  const label1 = gsap.utils.selector('[data-label="1"]')
+  const div1 = label1('div');
+  const p1 = label1('p');
+  gsap.to(div1, {
+    scrollTrigger: {
+      trigger: div1,
+      start: "top center",
+      end: "bottom center",
+      scrub: true,
+    },
+    backgroundColor: '#f97316',
+    ease: "none"
+  });
+  gsap.to(p1, {
+    scrollTrigger: {
+      trigger: p1,
+      start: "top center",
+      end: "bottom center",
+      scrub: true,
+    },
+    color: 'white',
+    ease: "none"
+  });
+  // 
+  const label2 = gsap.utils.selector('[data-label="2"]')
+  const div2 = label2('div');
+  const p2 = label2('p');
+  gsap.to(div2, {
+    scrollTrigger: {
+      trigger: div2,
+      start: "top center",
+      end: "bottom center",
+      scrub: true,
+    },
+    backgroundColor: '#f97316',
+    ease: "none"
+  });
+  gsap.to(p2, {
+    scrollTrigger: {
+      trigger: p2,
+      start: "top center",
+      end: "bottom center",
+      scrub: true,
+    },
+    color: 'white',
+    ease: "none"
+  });
+  // 
+  const label3 = gsap.utils.selector('[data-label="3"]')
+  const div3 = label3('div');
+  const p3 = label3('p');
+  gsap.to(div3, {
+    scrollTrigger: {
+      trigger: div3,
+      start: "top center",
+      end: "bottom center",
+      scrub: true,
+    },
+    backgroundColor: '#f97316',
+    ease: "none"
+  });
+  gsap.to(p3, {
+    scrollTrigger: {
+      trigger: p3,
+      start: "top center",
+      end: "bottom center",
+      scrub: true,
+    },
+    color: 'white',
+    ease: "none"
+  });
+  // 
+  const label4 = gsap.utils.selector('[data-label="4"]')
+  const div4 = label4('div');
+  const p4 = label4('p');
+  gsap.to(div4, {
+    scrollTrigger: {
+      trigger: div4,
+      start: "top center",
+      end: "bottom center",
+      scrub: true,
+    },
+    backgroundColor: '#f97316',
+    ease: "none"
+  });
+  gsap.to(p4, {
+    scrollTrigger: {
+      trigger: p4,
+      start: "top center",
+      end: "bottom center",
+      scrub: true,
+    },
+    color: 'white',
+    ease: "none"
+  });
+
+  // linegrow animations end
 });
 
 
