@@ -2151,6 +2151,10 @@ select {
     height: 20rem;
   }
 
+  .sm\:h-8 {
+    height: 2rem;
+  }
+
   .sm\:w-40 {
     width: 10rem;
   }
@@ -2169,6 +2173,10 @@ select {
 
   .sm\:w-44 {
     width: 11rem;
+  }
+
+  .sm\:w-8 {
+    width: 2rem;
   }
 
   .sm\:grid-cols-2 {
