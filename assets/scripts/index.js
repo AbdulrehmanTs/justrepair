@@ -45,15 +45,22 @@ $(document).ready(function () {
       autoplaySpeed: 5000,
     })
     .on("beforeChange", function (event, slick, currentSlide, nextSlide) {
-      // const headerColors = [
-      //   "#be185d",
-      //   "#4338ca",
-      //   "#7e22ce",
-      //   "#be123c",
-      //   "#0e7490",
-      //   "#047857",
-      //   "#5b21b6",
-      // ];
+      gsap.from(".title", {
+        x: -300,
+        duration: 1,
+      });
+      gsap.from(".description", {
+        x: 300,
+        duration: 1,
+      });
+      gsap.from(".slider-cta-btn", {
+        opacity: 0,
+        scale: 0,
+        x: -100,
+        duration: 0.5,
+        delay: 0.5,
+      });
+      
       const headerColors = [
         "#ffc100",
         "#ff9a00",
@@ -82,21 +89,7 @@ $(document).ready(function () {
 
       setTimeout(typeWriter, 500);
 
-      gsap.from(".title", {
-        x: -300,
-        duration: 1,
-      });
-      gsap.from(".description", {
-        x: 300,
-        duration: 1,
-      });
-      gsap.from(".slider-cta-btn", {
-        opacity: 0,
-        scale: 0,
-        x: -100,
-        duration: 0.5,
-        delay: 0.5,
-      });
+      
 
       
     });
