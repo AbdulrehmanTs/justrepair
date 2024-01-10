@@ -45,22 +45,25 @@ $(document).ready(function () {
       autoplaySpeed: 5000,
     })
     .on("beforeChange", function (event, slick, currentSlide, nextSlide) {
-      gsap.from(".title", {
-        x: -300,
-        duration: 1,
-      });
-      gsap.from(".description", {
-        x: 300,
-        duration: 1,
-      });
-      gsap.from(".slider-cta-btn", {
-        opacity: 0,
-        scale: 0,
-        x: -100,
-        duration: 0.5,
-        delay: 0.5,
-      });
-      
+      // gsap.from(".title", {
+      //   x: -300,
+      //   duration: 1,
+      //   toggleActions: "restart none none none",
+      // });
+      // gsap.from(".description", {
+      //   x: 300,
+      //   duration: 1,
+      //   toggleActions: "restart none none none",
+      // });
+      // gsap.from(".slider-cta-btn", {
+      //   opacity: 0,
+      //   scale: 0,
+      //   x: -100,
+      //   duration: 0.5,
+      //   delay: 0.5,
+      //   toggleActions: "restart none none none",
+      // });
+
       const headerColors = [
         "#ffc100",
         "#ff9a00",
@@ -88,12 +91,8 @@ $(document).ready(function () {
       }
 
       setTimeout(typeWriter, 500);
-
-      
-
-      
     });
-    $(".counter").counterUp({ time: 2000 });
+  $(".counter").counterUp({ time: 2000 });
 });
 
 const openSmMenu = () => {
@@ -132,10 +131,10 @@ const closeSmMenu = () => {
   document.getElementById("menu").classList.add("-translate-x-full");
   document.getElementById("menu").classList.remove("translate-x-0");
 };
-openMenu = () => {
+const openMenu = () => {
   document
     .getElementById("menu-hoverly")
-    .classList.remove("bg-gray-800/0","pointer-events-none");
+    .classList.remove("bg-gray-800/0", "pointer-events-none");
   document
     .getElementById("menu-hoverly")
     .classList.add("bg-gray-800/70", "pointer-events-auto");
@@ -171,7 +170,7 @@ openMenu = () => {
     stagger: 0.2,
   });
 };
-closeMenu = () => {
+const closeMenu = () => {
   document
     .getElementById("menu-hoverly")
     .classList.add("bg-gray-800/0", "pointer-events-none");
@@ -182,26 +181,48 @@ closeMenu = () => {
   document.getElementById("md-menu").classList.remove("translate-x-full");
 };
 
+
+const openInquiryForm = () => {
+  document
+    .getElementById("inquiry-hoverly")
+    .classList.remove("bg-gray-800/0", "pointer-events-none", "backdrop-blur-none");
+  document
+    .getElementById("inquiry-hoverly")
+    .classList.add("bg-gray-800/70", "pointer-events-auto", 'backdrop-blur-sm');
+  document.getElementById("inquiry-form").classList.remove("-translate-x-full");
+  document.getElementById("inquiry-form").classList.add("translate-x-0");
+};
+
+const closeInquiryForm = () => {
+  document
+    .getElementById("inquiry-hoverly")
+    .classList.remove("bg-gray-800/70", "pointer-events-auto", 'backdrop-blur-sm');
+  document
+    .getElementById("inquiry-hoverly")
+    .classList.add("bg-gray-800/0", "pointer-events-none", "backdrop-blur-none");
+  document.getElementById("inquiry-form").classList.add("-translate-x-full");
+  document.getElementById("inquiry-form").classList.remove("translate-x-full");
+};
+
 // stick header to top
 document.onscroll = () => {
-  let header = document.querySelector('.stiky-header');
-  let headerParent = document.querySelector('.header-parent');
-  let body = document.querySelector('body');
+  let header = document.querySelector(".stiky-header");
+  let headerParent = document.querySelector(".header-parent");
+  let body = document.querySelector("body");
   if (window.scrollY > headerParent.offsetTop) {
-    header.classList.remove("p-4", "md:p-6")
-    header.classList.add("fixed", "top-0", "shadow-lg", "z-10")
+    header.classList.remove("p-4", "md:p-6");
+    header.classList.add("fixed", "top-0", "shadow-lg", "z-10");
     body.style.paddingTop = header.offsetHeight + "px";
   } else {
-    header.classList.add("p-4", "md:p-6")
-    header.classList.remove("fixed", "top-0", "shadow-lg", "z-10")
-    body.style.paddingTop = 0
+    header.classList.add("p-4", "md:p-6");
+    header.classList.remove("fixed", "top-0", "shadow-lg", "z-10");
+    body.style.paddingTop = 0;
   }
-  
 };
 
 // Footer Year set
-document.querySelector('.footer-year').innerHTML = new Date().getFullYear();
-// 
+document.querySelector(".footer-year").innerHTML = new Date().getFullYear();
+//
 
 // Flip cards
 function flipCard(index) {
@@ -218,13 +239,13 @@ function flipCardBack(index) {
 // Flip cards end
 
 // Smoth scrolling
-const lenis = new Lenis();
-function raf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
-}
+// const lenis = new Lenis();
+// function raf(time) {
+//   lenis.raf(time);
+//   requestAnimationFrame(raf);
+// }
 
-requestAnimationFrame(raf);
+// requestAnimationFrame(raf);
 
 document.addEventListener("DOMContentLoaded", function () {
   // scroll plugin
@@ -332,7 +353,6 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
-
   gsap.from(".logo", {
     scale: 0,
     x: -100,
@@ -357,7 +377,7 @@ document.addEventListener("DOMContentLoaded", function () {
     scrollTrigger: {
       trigger: ".feature",
       toggleActions: "restart none none none",
-    }
+    },
   });
 
   //
@@ -377,17 +397,16 @@ document.addEventListener("DOMContentLoaded", function () {
       trigger: ".line",
       scrub: true,
       start: "top center",
-      end: "+=1000"
+      end: "+=1000",
     },
-    markers: true,
     scaleY: 0,
-    ease: "none"
+    ease: "none",
   });
 
-  // 
-  const label1 = gsap.utils.selector('[data-label="1"]')
-  const div1 = label1('div');
-  const p1 = label1('p');
+  //
+  const label1 = gsap.utils.selector('[data-label="1"]');
+  const div1 = label1("div");
+  const p1 = label1("p");
   gsap.to(div1, {
     scrollTrigger: {
       trigger: div1,
@@ -395,8 +414,8 @@ document.addEventListener("DOMContentLoaded", function () {
       end: "bottom center",
       scrub: true,
     },
-    backgroundColor: '#f97316',
-    ease: "none"
+    backgroundColor: "#f97316",
+    ease: "none",
   });
   gsap.to(p1, {
     scrollTrigger: {
@@ -405,13 +424,13 @@ document.addEventListener("DOMContentLoaded", function () {
       end: "bottom center",
       scrub: true,
     },
-    color: 'white',
-    ease: "none"
+    color: "white",
+    ease: "none",
   });
-  // 
-  const label2 = gsap.utils.selector('[data-label="2"]')
-  const div2 = label2('div');
-  const p2 = label2('p');
+  //
+  const label2 = gsap.utils.selector('[data-label="2"]');
+  const div2 = label2("div");
+  const p2 = label2("p");
   gsap.to(div2, {
     scrollTrigger: {
       trigger: div2,
@@ -419,8 +438,8 @@ document.addEventListener("DOMContentLoaded", function () {
       end: "bottom center",
       scrub: true,
     },
-    backgroundColor: '#f97316',
-    ease: "none"
+    backgroundColor: "#f97316",
+    ease: "none",
   });
   gsap.to(p2, {
     scrollTrigger: {
@@ -429,13 +448,13 @@ document.addEventListener("DOMContentLoaded", function () {
       end: "bottom center",
       scrub: true,
     },
-    color: 'white',
-    ease: "none"
+    color: "white",
+    ease: "none",
   });
-  // 
-  const label3 = gsap.utils.selector('[data-label="3"]')
-  const div3 = label3('div');
-  const p3 = label3('p');
+  //
+  const label3 = gsap.utils.selector('[data-label="3"]');
+  const div3 = label3("div");
+  const p3 = label3("p");
   gsap.to(div3, {
     scrollTrigger: {
       trigger: div3,
@@ -443,8 +462,8 @@ document.addEventListener("DOMContentLoaded", function () {
       end: "bottom center",
       scrub: true,
     },
-    backgroundColor: '#f97316',
-    ease: "none"
+    backgroundColor: "#f97316",
+    ease: "none",
   });
   gsap.to(p3, {
     scrollTrigger: {
@@ -453,13 +472,13 @@ document.addEventListener("DOMContentLoaded", function () {
       end: "bottom center",
       scrub: true,
     },
-    color: 'white',
-    ease: "none"
+    color: "white",
+    ease: "none",
   });
-  // 
-  const label4 = gsap.utils.selector('[data-label="4"]')
-  const div4 = label4('div');
-  const p4 = label4('p');
+  //
+  const label4 = gsap.utils.selector('[data-label="4"]');
+  const div4 = label4("div");
+  const p4 = label4("p");
   gsap.to(div4, {
     scrollTrigger: {
       trigger: div4,
@@ -467,8 +486,8 @@ document.addEventListener("DOMContentLoaded", function () {
       end: "bottom center",
       scrub: true,
     },
-    backgroundColor: '#f97316',
-    ease: "none"
+    backgroundColor: "#f97316",
+    ease: "none",
   });
   gsap.to(p4, {
     scrollTrigger: {
@@ -477,12 +496,9 @@ document.addEventListener("DOMContentLoaded", function () {
       end: "bottom center",
       scrub: true,
     },
-    color: 'white',
-    ease: "none"
+    color: "white",
+    ease: "none",
   });
 
   // linegrow animations end
 });
-
-
-
