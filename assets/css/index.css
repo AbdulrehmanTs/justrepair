@@ -166,8 +166,16 @@ select {
     background-color: #f97316;
     transition: 0.3s;
 }
+
+.menu-link.active {
+  color: #f97316;
+}
+
+.menu-link.active::after {
+  width: 70%;
+}
 .menu-link:hover::after {
-    width: 70%;
+    width: 80%;
 }
 
 .flip-card {
@@ -201,4 +209,9 @@ select {
 
 .flip-card-back {
   transform: rotateY(180deg);
+}
+
+.radial-gradient {
+background: #FED7AA;
+background: radial-gradient(at center, #FED7AA, #F97416);
 }

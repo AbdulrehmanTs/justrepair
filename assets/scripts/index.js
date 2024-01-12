@@ -206,16 +206,16 @@ const closeInquiryForm = () => {
 
 // stick header to top
 document.onscroll = () => {
-  let header = document.querySelector(".stiky-header");
+  let header = document.querySelector(".sticky-header");
   let headerParent = document.querySelector(".header-parent");
   let body = document.querySelector("body");
   if (window.scrollY > headerParent.offsetTop) {
-    header.classList.remove("p-4", "md:p-6");
-    header.classList.add("fixed", "top-0", "shadow-lg", "z-10");
+    header.classList.remove("py-4");
+    header.classList.add("fixed", "top-0", "shadow-lg", "z-10", 'py-2');
     body.style.paddingTop = header.offsetHeight + "px";
   } else {
-    header.classList.add("p-4", "md:p-6");
-    header.classList.remove("fixed", "top-0", "shadow-lg", "z-10");
+    header.classList.add("py-4");
+    header.classList.remove("fixed", "top-0", "shadow-lg", "z-10", 'py-2');
     body.style.paddingTop = 0;
   }
 };
@@ -502,3 +502,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // linegrow animations end
 });
+
+
+
+// Articles 
