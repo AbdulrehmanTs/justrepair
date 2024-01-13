@@ -225,17 +225,25 @@ document.querySelector(".footer-year").innerHTML = new Date().getFullYear();
 //
 
 // Flip cards
-function flipCard(index) {
-  const cards = document.querySelectorAll(".flip-card");
-  let inner = cards[index].querySelector(".flip-card-inner");
-  inner.style.transform = "rotateY(180deg)";
+// function flipCard(index) {
+//   const cards = document.querySelectorAll(".flip-card");
+//   let inner = cards[index].querySelector(".flip-card-inner");
+//   inner.style.transform = "rotateY(180deg)";
+// }
+// Flip cards
+function flipCard(elem) {
+  console.log(elem.parentNode.parentNode.parentNode);
+  elem.parentNode.parentNode.parentNode.style.transform = "rotateY(180deg)";
 }
 
-function flipCardBack(index) {
-  const cards = document.querySelectorAll(".flip-card");
-  let inner = cards[index].querySelector(".flip-card-inner");
-  inner.style.transform = "rotateY(0deg)";
+function flipCardBack(elem) {
+  elem.parentNode.parentNode.parentNode.parentNode.style.transform = "rotateY(0deg)";
 }
+// function flipCardBack(index) {
+//   const cards = document.querySelectorAll(".flip-card");
+//   let inner = cards[index].querySelector(".flip-card-inner");
+//   inner.style.transform = "rotateY(0deg)";
+// }
 // Flip cards end
 
 // Smoth scrolling
