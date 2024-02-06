@@ -182,26 +182,21 @@ const closeMenu = () => {
 };
 
 
+const inquiryHoverly = document.getElementById("inquiry-hoverly");
+const inquiryForm = document.getElementById("inquiry-form");
+
 const openInquiryForm = () => {
-  document
-    .getElementById("inquiry-hoverly")
-    .classList.remove("bg-gray-800/0", "pointer-events-none", "backdrop-blur-none");
-  document
-    .getElementById("inquiry-hoverly")
-    .classList.add("bg-gray-800/70", "pointer-events-auto", 'backdrop-blur-sm');
-  document.getElementById("inquiry-form").classList.remove("-translate-x-full");
-  document.getElementById("inquiry-form").classList.add("translate-x-0");
+  inquiryHoverly.classList.remove("bg-gray-800/0", "pointer-events-none", "backdrop-blur-none");
+  inquiryHoverly.classList.add("bg-gray-800/70", "pointer-events-auto", 'backdrop-blur-sm');
+  inquiryForm.classList.remove("-translate-x-full");
+  inquiryForm.classList.add("translate-x-0");
 };
 
 const closeInquiryForm = () => {
-  document
-    .getElementById("inquiry-hoverly")
-    .classList.remove("bg-gray-800/70", "pointer-events-auto", 'backdrop-blur-sm');
-  document
-    .getElementById("inquiry-hoverly")
-    .classList.add("bg-gray-800/0", "pointer-events-none", "backdrop-blur-none");
-  document.getElementById("inquiry-form").classList.add("-translate-x-full");
-  document.getElementById("inquiry-form").classList.remove("translate-x-full");
+  inquiryHoverly.classList.remove("bg-gray-800/70", "pointer-events-auto", 'backdrop-blur-sm');
+  inquiryHoverly.classList.add("bg-gray-800/0", "pointer-events-none", "backdrop-blur-none");
+  inquiryForm.classList.add("-translate-x-full");
+  inquiryForm.classList.remove("translate-x-0");
 };
 
 // stick header to top
@@ -225,25 +220,27 @@ document.querySelector(".footer-year").innerHTML = new Date().getFullYear();
 //
 
 // Flip cards
-// function flipCard(index) {
-//   const cards = document.querySelectorAll(".flip-card");
-//   let inner = cards[index].querySelector(".flip-card-inner");
-//   inner.style.transform = "rotateY(180deg)";
-// }
+function flipCard(index) {
+  const cards = document.querySelectorAll(".flip-card");
+  let inner = cards[index].querySelector(".flip-card-inner");
+  inner.style.transform = "rotateY(180deg)";
+}
 // Flip cards
-function flipCard(elem) {
-  console.log(elem.parentNode.parentNode.parentNode);
-  elem.parentNode.parentNode.parentNode.style.transform = "rotateY(180deg)";
+// function flipCard(elem) {
+//   console.log(elem.parentNode.parentNode.parentNode);
+//   elem.parentNode.parentNode.parentNode.style.transform = "rotateY(180deg)";
+// }
+
+// function flipCardBack(elem) {
+//   elem.parentNode.parentNode.parentNode.parentNode.style.transform = "rotateY(0deg)";
+// }
+
+function flipCardBack(index) {
+  const cards = document.querySelectorAll(".flip-card");
+  let inner = cards[index].querySelector(".flip-card-inner");
+  inner.style.transform = "rotateY(0deg)";
 }
 
-function flipCardBack(elem) {
-  elem.parentNode.parentNode.parentNode.parentNode.style.transform = "rotateY(0deg)";
-}
-// function flipCardBack(index) {
-//   const cards = document.querySelectorAll(".flip-card");
-//   let inner = cards[index].querySelector(".flip-card-inner");
-//   inner.style.transform = "rotateY(0deg)";
-// }
 // Flip cards end
 
 // Smoth scrolling
