@@ -510,4 +510,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-// Articles 
+// Gallry Image Change
+
+const selectedImage = document.querySelector("#selected-image")
+const thumbnails = document.querySelectorAll(".thumbnail");
+
+const changeImage = (e) => {
+  thumbnails.forEach(thumbnail => thumbnail.classList.remove("border", "border-orange-500"))
+  console.log(thumbnails[0])
+  selectedImage.setAttribute("src", e.src)
+  e.classList.add("border", "border-orange-500")
+}
+
+// 
+
+
