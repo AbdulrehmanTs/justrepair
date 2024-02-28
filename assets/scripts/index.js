@@ -525,3 +525,24 @@ const changeImage = (e) => {
 // 
 
 
+
+// Borken Phones Dropdown
+
+
+const elements = document.querySelectorAll(".button_form_layout_wizard7");
+elements.forEach((e) => {
+  e.addEventListener("change", (e1) => {
+    elements.forEach((item) => {
+      if (item.checked) {
+        item.parentElement.classList.add("border-orange-500");
+        item.parentElement.classList.add("bg-gray-50");
+        item.parentElement.children[1].classList.add("font-medium");
+      } else if (!item.checked) {
+        item.parentElement.classList.remove("border-orange-500");
+        item.parentElement.classList.remove("bg-gray-50");
+        item.parentElement.children[1].classList.remove("font-medium");
+      }
+    });
+  });
+});
+
