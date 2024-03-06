@@ -69,7 +69,7 @@ $(document).ready(function () {
         "#ff9a00",
         "#ff7400",
         "#ff4d00",
-        "#ff0000",
+        "#b45309",
         "#a16207",
         "#854d0e",
       ];
@@ -197,6 +197,22 @@ const closeInquiryForm = () => {
   inquiryHoverly.classList.add("bg-gray-800/0", "pointer-events-none", "backdrop-blur-none");
   inquiryForm.classList.add("-translate-x-full");
   inquiryForm.classList.remove("translate-x-0");
+};
+
+const enquiryPopupBg = document.getElementById("enquiry-popup-bg");
+const enquiryPopupForm = document.getElementById("enquiry-popup-form");
+
+const openInquiryPopup = () => {
+  enquiryPopupBg.classList.remove("bg-gray-800/0", "pointer-events-none", "backdrop-blur-none");
+  enquiryPopupBg.classList.add("bg-gray-800/40", "pointer-events-auto", 'backdrop-blur-sm');
+  enquiryPopupForm.classList.add("scale-100")
+  enquiryPopupForm.classList.remove("scale-0")
+};
+const closeEnquiryPopup = () => {
+  enquiryPopupBg.classList.remove("bg-gray-800/40", "pointer-events-auto", 'backdrop-blur-sm');
+  enquiryPopupBg.classList.add("bg-gray-800/0", "pointer-events-none", "backdrop-blur-none");
+  enquiryPopupForm.classList.add("scale-0")
+  enquiryPopupForm.classList.remove("scale-100")
 };
 
 // stick header to top
