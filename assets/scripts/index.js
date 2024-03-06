@@ -64,18 +64,18 @@ $(document).ready(function () {
       //   toggleActions: "restart none none none",
       // });
 
-      // const headerColors = [
-      //   "#9a3412",
-      //   "#3f6212",
-      //   "#fde68a",
-      //   "#fef08a",
-      //   "#d9f99d",
-      //   "#bbf7d0",
-      //   "#99f6e4",
-      // ];
-      // document
-      //   .querySelector(":root")
-      //   .style.setProperty("--header-bg-color", headerColors[nextSlide]);
+      const headerColors = [
+        "#c2410c",
+        "#c2410c",
+        "#a16207",
+        "#fef08a",
+        "#d9f99d",
+        "#bbf7d0",
+        "#99f6e4",
+      ];
+      document
+        .querySelector(":root")
+        .style.setProperty("--header-bg-color", headerColors[nextSlide]);
       let title =
         slides[nextSlide].querySelector(".title").children[0].innerHTML;
       slides[nextSlide].querySelector(".title").children[0].innerHTML = "";
