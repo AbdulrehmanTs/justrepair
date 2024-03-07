@@ -66,12 +66,12 @@ $(document).ready(function () {
 
       const headerColors = [
         "#c2410c",
-        "#c2410c",
+        "#4d7c0f",
         "#a16207",
-        "#fef08a",
-        "#d9f99d",
-        "#bbf7d0",
-        "#99f6e4",
+        "#9333ea",
+        "#c026d3",
+        "#db2777",
+        "#e11d48",
       ];
       document
         .querySelector(":root")
