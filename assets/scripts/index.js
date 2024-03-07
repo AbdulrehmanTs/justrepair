@@ -241,30 +241,13 @@ function flipCard(index) {
   let inner = cards[index].querySelector(".flip-card-inner");
   inner.style.transform = "rotateY(180deg)";
 }
-// Flip cards
-// function flipCard(elem) {
-//   console.log(elem.parentNode.parentNode.parentNode);
-//   elem.parentNode.parentNode.parentNode.style.transform = "rotateY(180deg)";
-// }
-
-// function flipCardBack(elem) {
-//   elem.parentNode.parentNode.parentNode.parentNode.style.transform = "rotateY(0deg)";
-// }
-
 function flipCardBack(index) {
   const cards = document.querySelectorAll(".flip-card");
   let inner = cards[index].querySelector(".flip-card-inner");
   inner.style.transform = "rotateY(0deg)";
 }
-
 // Flip cards end
 
-// Smoth scrolling
-// const lenis = new Lenis();
-// function raf(time) {
-//   lenis.raf(time);
-//   requestAnimationFrame(raf);
-// }
 
 // requestAnimationFrame(raf);
 
@@ -527,13 +510,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // Gallry Image Change
-
 const selectedImage = document.querySelector("#selected-image")
 const thumbnails = document.querySelectorAll(".thumbnail");
 
 const changeImage = (e) => {
   thumbnails.forEach(thumbnail => thumbnail.classList.remove("border", "border-orange-500"))
-  console.log(thumbnails[0])
   selectedImage.setAttribute("src", e.src)
   e.classList.add("border", "border-orange-500")
 }
@@ -543,7 +524,6 @@ const changeImage = (e) => {
 
 
 // Borken Phones Dropdown
-
 
 const elements = document.querySelectorAll(".button_form_layout_wizard7");
 elements.forEach((e) => {
