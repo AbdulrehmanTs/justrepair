@@ -370,14 +370,44 @@
       <div
         id="inquiry-form"
         class="-translate-x-full transition-all duration-500 ease-in-out relative w-full"
-      >
-        <div
-          class="absolute inset-0 flex flex-col md:2/3 xl:w-1/2 bg-white h-screen overflow-y-scroll shadow-lg p-2 sm:p-6"
         >
-          <button
+        <div
+        class="relative flex flex-col md:2/3 xl:w-1/2 border bg-white h-screen overflow-y-scroll shadow-lg p-2 sm:p-6"
+        >
+        <div class="absolute inset-0 blur-sm" style="background-image: url(../assets/images/pngegg.png);"></div>
+          <div class="rounded bg-white/90 relative shadow mt-4 sm:mt-2 pb-7">
+
+            <div class="w-full rounded bg-gray-50/40">
+              <div class="flex items-center justify-between w-full px-5 py-4">
+                <span
+                  class="text-sm font-medium text-orange-500 flex items-center justify-between w-full gap-x-2"
+                >
+                  <div class="flex gap-x-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-5 h-5"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z"
+                      />
+                    </svg>
+
+                    <p
+                      class="text-base font-medium leading-none text-orange-500 "
+                    >
+                      Quick Inquiry
+                    </p>
+                  </div>
+                  <button
             onclick="closeInquiryForm()"
             aria-label="close inquiry form"
-            class="self-end m-6"
+            class="self-end"
           >
             <svg
               width="24"
@@ -402,34 +432,6 @@
               />
             </svg>
           </button>
-          <div class="bg-white rounded shadow mt-4 sm:mt-2 pb-7">
-            <div class="w-full rounded bg-gray-50">
-              <div class="flex items-center justify-between w-full px-5 py-4">
-                <span
-                  class="pr-4 text-sm font-medium text-orange-500 flex flex-row-reverse justify-end gap-x-2"
-                >
-                  <div class="flex gap-x-2">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="w-5 h-5"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z"
-                      />
-                    </svg>
-
-                    <p
-                      class="text-base font-medium leading-none text-orange-500 mt-[1px]"
-                    >
-                      Quick Inquiry
-                    </p>
-                  </div>
                 </span>
               </div>
             </div>
@@ -476,11 +478,11 @@
                         name="device-type"
                         id="device-type"
                       >
-                        <option value="apple">apple</option>
-                        <option value="samsung">samsung</option>
+                        <option value="apple">Apple</option>
+                        <option value="samsung">Samsung</option>
                         <option value="Huawei">Huawei</option>
-                        <option value="oppo">oppo</option>
-                        <option value="oneplus">oneplus</option>
+                        <option value="oppo">Oppo</option>
+                        <option value="oneplus">Oneplus</option>
                       </select>
                     </div>
                   </div>
@@ -541,7 +543,7 @@
                     <span class="text-red-500">*</span>
                   </p>
                   <input
-                    class="w-full p-3 mt-4 border border-gray-300 rounded outline-none focus:bg-gray-50"
+                    class="w-full p-3 mt-4 border border-gray-300 bg-transparent focus:bg-gray-50/40 rounded outline-none"
                     placeholder="other issue"
                   />
                   <p class="mt-3 text-xs text-gray-500">
@@ -556,7 +558,7 @@
                 </p>
                 <div class="mt-6">
                   <textarea
-                    class="w-full border border-gray-300 rounded px-4 py-4 text-base outline-none text-slate-600"
+                    class="w-full border border-gray-300 bg-transparent focus:bg-gray-50/40 rounded px-4 py-4 text-base outline-none text-slate-600"
                     rows="6"
                     placeholder="Start typing here ..."
                   ></textarea>
@@ -567,7 +569,7 @@
               </div>
             </div>
 
-            <div class="w-full rounded mt-14 bg-gray-50">
+            <div class="w-full rounded mt-14 bg-gray-50/40">
               <div class="flex items-center justify-between w-full px-5 py-4">
                 <span
                   class="pr-4 text-sm font-medium text-orange-500 flex flex-row-reverse justify-end gap-x-2"
@@ -606,7 +608,7 @@
                   </p>
                   <div class="relative top-1">
                     <input
-                      class="w-full p-3 mt-4 border border-gray-300 rounded outline-none focus:bg-gray-50"
+                      class="w-full p-3 mt-4 border border-gray-300 rounded outline-none bg-transparent focus:bg-gray-50/40"
                       placeholder="Full name"
                     />
                   </div>
@@ -617,7 +619,7 @@
                   </p>
                   <div class="relative top-1">
                     <input
-                      class="w-full p-3 mt-4 border border-gray-300 rounded outline-none focus:bg-gray-50"
+                      class="w-full p-3 mt-4 border border-gray-300 rounded outline-none bg-transparent focus:bg-gray-50/40"
                       placeholder="+977 000 0000000"
                     />
                   </div>
@@ -628,7 +630,7 @@
                   </p>
                   <div class="relative top-1">
                     <input
-                      class="w-full p-3 mt-4 border border-gray-300 rounded outline-none focus:bg-gray-50"
+                      class="w-full p-3 mt-4 border border-gray-300 rounded outline-none bg-transparent focus:bg-gray-50/40"
                       placeholder="email@example.com"
                     />
                   </div>
@@ -639,7 +641,7 @@
                   </p>
                   <div class="relative top-1">
                     <input
-                      class="w-full p-3 mt-4 border border-gray-300 rounded outline-none focus:bg-gray-50"
+                      class="w-full p-3 mt-4 border border-gray-300 rounded outline-none bg-transparent focus:bg-gray-50/40"
                       placeholder="5727 DuBuque Stream, dubai"
                     />
                   </div>
@@ -652,7 +654,7 @@
             >
               <button
                 onclick="closeInquiryForm()"
-                class="bg-white border-orange-500 rounded hover:bg-gray-50 transform duration-300 ease-in-out text-sm font-medium px-6 py-4 text-orange-500 border md:max-w-[95px] w-full"
+                class="bg-white/40 border-orange-500 rounded hover:bg-gray-50/50 transform duration-300 ease-in-out text-sm font-medium px-6 py-4 text-orange-500 border md:max-w-[95px] w-full"
               >
                 Cancel
               </button>
@@ -1319,7 +1321,8 @@
       <div class="container mx-auto">
         <div class="h-[1000px] lg:h-[1100px]">
           <div
-          class="mx-auto flex flex-col items-center h-full bg-[url(../assets/psbg.webp)] bg-no-repeat bg-cover bg-center"
+          class="mx-auto flex flex-col items-center h-full bg-no-repeat bg-cover bg-center"
+          style="background-image: url(../assets/psbg.webp);"
           >
             <h2
               class="text-center font-bold text-3xl mt-24"
@@ -1362,6 +1365,14 @@
                       </div>
                     </span>
                   </div>
+                </div>
+
+                <div class="md-logo mx-auto focus:outline-none h-14 w-44">
+                  <img
+                    class="w-full h-full object-contain rounded"
+                    src="../assets/images/logo.webp"
+                    alt="logo"
+                  />
                 </div>
 
                 <div class="mt-10 px-2 md:px-4">

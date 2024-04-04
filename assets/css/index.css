@@ -5,6 +5,7 @@
 
 :root {
     --header-bg-color: #c2410c /* orange-700 */;
+    --priamry: #f97316;
 }
 
 body {
@@ -153,6 +154,10 @@ select {
 
 .menu-link {
     position: relative;
+    color: var(--priamry)
+}
+.menu-link:hover {
+    color: var(--priamry) !important;
 }
 
 .menu-link::after {
@@ -163,12 +168,15 @@ select {
     width: 0px;
     height: 2px;
     border-radius: 12px;
-    background-color: #f97316;
+    background-color: var(--priamry);
     transition: 0.3s;
 }
 
 .menu-link.active {
-  color: #f97316;
+  color: var(--priamry);
+}
+.menu-link.active:hover {
+  color: var(--priamry);
 }
 
 .menu-link.active::after {
