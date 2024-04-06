@@ -131,6 +131,7 @@ const closeSmMenu = () => {
   document.getElementById("menu").classList.add("-translate-x-full");
   document.getElementById("menu").classList.remove("translate-x-0");
 };
+
 const openMenu = () => {
   document
     .getElementById("menu-hoverly")
@@ -138,8 +139,7 @@ const openMenu = () => {
   document
     .getElementById("menu-hoverly")
     .classList.add("bg-gray-800/70", "pointer-events-auto");
-  document.getElementById("md-menu").classList.remove("-translate-x-full");
-  document.getElementById("md-menu").classList.add("translate-x-0");
+  document.getElementById("md-menu").classList.toggle("-translate-x-full");
 
   // animations
   gsap.from(".md-menu-link", {
@@ -177,8 +177,7 @@ const closeMenu = () => {
   document
     .getElementById("menu-hoverly")
     .classList.remove("bg-gray-800/70", "pointer-events-auto");
-  document.getElementById("md-menu").classList.add("-translate-x-full");
-  document.getElementById("md-menu").classList.remove("translate-x-full");
+  document.getElementById("md-menu").classList.toggle("-translate-x-full");
 };
 
 
@@ -237,7 +236,7 @@ document.onscroll = () => {
     [...menuLink].map((item)=> {
       item.style.setProperty('--priamry', '#f97316')
     })
-    activeLink.style.setProperty('--priamry', '#f97316')
+    activeLink?.style?.setProperty('--priamry', '#f97316')
     body.style.paddingTop = 0;
     logo.src = '../assets/images/logo.webp'
   }
