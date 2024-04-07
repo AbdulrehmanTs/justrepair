@@ -1318,9 +1318,9 @@
         >
           Smartwatch Repair
         </h2>
-        <div class="h-[800px] -mt-40 mx-auto">
+        <div class="h-[800px] sm:h-[800px] w-[320px] sm:w-auto -mt-40 mx-auto">
           <div
-          class="mx-auto h-full flex flex-col items-center bg-no-repeat bg-contain bg-center"
+          class="mx-auto h-full flex flex-col items-center bg-no-repeat bg-cover sm:bg-contain  bg-center"
           style="background-image: url(../assets/images/bgs/AppleWatch.png);"
           >
             <div
@@ -1332,7 +1332,7 @@
                   class="flex items-center justify-between w-full px-5 py-4"
                 >
                   <span
-                    class="pr-4 text-sm font-medium text-orange-500 gap-x-2"
+                    class=" text-sm font-medium text-orange-500 gap-x-2"
                   >
                     <div class="flex gap-x-2">
                       <svg
@@ -1351,7 +1351,7 @@
                       </svg>
 
                       <p
-                        class="text-sm font-medium leading-none text-orange-500 mt-[1px]"
+                        class="text-xs font-medium leading-none text-orange-500 mt-[1px]"
                       >
                         Quick Inquiry
                       </p>
@@ -1359,7 +1359,7 @@
                   </span>
                 </div>
               </div>
-              <div class="md-logo mx-auto focus:outline-none h-14 w-44">
+              <div class="md-logo mx-auto focus:outline-none h-14 w-40">
                 <img
                   class="w-full h-full object-contain rounded"
                   src="../assets/images/logo.webp"
@@ -1370,11 +1370,11 @@
                 <div class="grid w-full grid-cols-1 gap-7 mt-7">
                   <div class="">
                     <p
-                      class="text-base font-medium leading-none text-gray-800"
+                      class="text-sm font-medium leading-none text-gray-800"
                     >
                       Device Type <span class="text-red-500">*</span>
                     </p>
-                    <div class="relative top-1">
+                    <div class="relative text-sm top-1">
                       <div
                         class="relative w-full mt-2 px-2 border border-gray-300 rounded outline-none"
                       >
@@ -1399,11 +1399,11 @@
                   </div>
                   <div>
                     <p
-                      class="text-base font-medium leading-none text-gray-800"
+                      class="text-sm font-medium leading-none text-gray-800"
                     >
                       Select your Device <span class="text-red-500">*</span>
                     </p>
-                    <div class="relative top-1">
+                    <div class="relative text-sm top-1">
                       <div
                         class="relative w-full mt-2 px-2 border border-gray-300 rounded outline-none"
                       >
@@ -1426,11 +1426,11 @@
                   </div>
                   <div>
                     <p
-                      class="text-base font-medium leading-none text-gray-800"
+                      class="text-sm font-medium leading-none text-gray-800"
                     >
                       Select Service <span class="text-red-500">*</span>
                     </p>
-                    <div class="relative top-1">
+                    <div class="relative top-1 text-sm">
                       <div
                         class="relative w-full mt-2 px-2 border border-gray-300 rounded outline-none"
                       >
@@ -1476,9 +1476,9 @@
                       issue
                     </p>
                   </div>
-                  <div>
+                  <div class="text-sm">
                     <p
-                      class="text-base font-medium leading-none text-gray-800"
+                      class="font-medium leading-none text-gray-800"
                     >
                       Issue name (if selected other)
                       <span class="text-red-500">*</span>
@@ -1493,11 +1493,11 @@
                   </div>
                 </div>
                 <div class="pt-10 border-gray-300 mt-2">
-                  <p class="text-base font-semibold text-gray-800">
+                  <p class="text-sm font-semibold text-gray-800">
                     Write down the details about your issue
                     <span class="text-gray-400">(optional)</span>
                   </p>
-                  <div class="mt-6">
+                  <div class="mt-6 text-sm">
                     <textarea
                       class="w-full border border-gray-300 rounded px-2 py-2 text-base outline-none bg-transparent text-slate-600"
                       rows="6"
@@ -1534,7 +1534,7 @@
                       </svg>
 
                       <p
-                        class="text-base font-medium leading-none text-orange-500 mt-[1px]"
+                        class="text-sm font-medium leading-none text-orange-500 mt-[1px]"
                       >
                         Your Personal Information
                       </p>
@@ -1547,59 +1547,59 @@
                 <div class="grid w-full grid-cols-1 gap-7 mt-7">
                   <div class="">
                     <p
-                      class="text-base font-medium leading-none text-gray-800"
+                      class="text-sm font-medium leading-none text-gray-800"
                     >
                       Full Name <span class="text-red-500">*</span>
                     </p>
                     <div class="relative top-1">
                       <input
-                        class="w-full p-2 mt-4 border border-gray-300 rounded outline-none bg-transparent focus:bg-gray-50"
+                        class="w-full p-2 text-sm mt-4 border border-gray-300 rounded outline-none bg-transparent focus:bg-gray-50"
                         placeholder="Full name"
                       />
                     </div>
                   </div>
                   <div class="">
                     <p
-                      class="text-base font-medium leading-none text-gray-800"
+                      class="text-sm font-medium leading-none text-gray-800"
                     >
                       Phone Number <span class="text-red-500">*</span>
                     </p>
                     <div class="relative top-1">
                       <input
-                        class="w-full p-2 mt-4 border border-gray-300 rounded outline-none bg-transparent focus:bg-gray-50"
+                        class="w-full p-2 text-sm mt-4 border border-gray-300 rounded outline-none bg-transparent focus:bg-gray-50"
                         placeholder="+977 000 0000000"
                       />
                     </div>
                   </div>
                   <div class="">
                     <p
-                      class="text-base font-medium leading-none text-gray-800"
+                      class="text-sm font-medium leading-none text-gray-800"
                     >
                       Email <span class="text-red-500">*</span>
                     </p>
                     <div class="relative top-1">
                       <input
-                        class="w-full p-2 mt-4 border border-gray-300 rounded outline-none bg-transparent focus:bg-gray-50"
+                        class="w-full p-2 text-sm mt-4 border border-gray-300 rounded outline-none bg-transparent focus:bg-gray-50"
                         placeholder="email@example.com"
                       />
                     </div>
                   </div>
                   <div class="">
                     <p
-                      class="text-base font-medium leading-none text-gray-800"
+                      class="text-sm font-medium leading-none text-gray-800"
                     >
                       Full Address <span class="text-red-500">*</span>
                     </p>
                     <div class="relative top-1">
                       <input
-                        class="w-full p-2 mt-4 border border-gray-300 rounded outline-none bg-transparent focus:bg-gray-50"
+                        class="w-full p-2 text-sm mt-4 border border-gray-300 rounded outline-none bg-transparent focus:bg-gray-50"
                         placeholder="5727 DuBuque Stream, dubai"
                       />
                     </div>
                   </div>
                 </div>
               </div>
-              <hr class="h-px bg-gray-100 my-14" />
+              <hr class="h-px bg-gray-100 my-8" />
               <div
                 class="flex flex-col flex-wrap items-center justify-center w-full px-2 gap-x-4 gap-y-4"
               >
