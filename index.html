@@ -394,13 +394,15 @@
       <div
         id="inquiry-form"
         class="-translate-x-full transition-all duration-500 ease-in-out relative w-full"
-        >
+      >
         <div
-        class="relative flex flex-col md:2/3 xl:w-1/2 border bg-white h-screen overflow-y-scroll shadow-lg p-2 sm:p-6"
+          class="relative flex flex-col md:2/3 xl:w-1/2 bg-white h-screen overflow-y-scroll shadow-lg"
         >
-        <div class="absolute inset-0 blur-sm" style="background-image: url(../assets/images/pngegg.png);"></div>
-          <div class="rounded bg-white/90 relative shadow mt-4 sm:mt-2 pb-7">
-
+          <div
+            class="p-2 sm:p-6"
+            style="background-image: url(./assets/images/orange-bg.svg)"
+          >
+          <div class="rounded bg-white/80 relative shadow mt-4 sm:mt-2 pb-7">
             <div class="w-full rounded bg-gray-50/40">
               <div class="flex items-center justify-between w-full px-5 py-4">
                 <span
@@ -423,39 +425,39 @@
                     </svg>
 
                     <p
-                      class="text-base font-medium leading-none text-orange-500 "
+                      class="text-base font-medium leading-none text-orange-500"
                     >
                       Quick Inquiry
                     </p>
                   </div>
                   <button
-            onclick="closeInquiryForm()"
-            aria-label="close inquiry form"
-            class="self-end"
-          >
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 20 20"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M15 5L5 15"
-                stroke="#000000"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M5 5L15 15"
-                stroke="#000000"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </button>
+                    onclick="closeInquiryForm()"
+                    aria-label="close inquiry form"
+                    class="self-end"
+                  >
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M15 5L5 15"
+                        stroke="#000000"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M5 5L15 15"
+                        stroke="#000000"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
                 </span>
               </div>
             </div>
@@ -689,6 +691,7 @@
               </button>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </div>
@@ -1174,7 +1177,7 @@
       </div>
       <div class="header-parent">
         <div
-          class="sticky-header pr-6 py-4 bg-white w-full transition-all duration-300 ease-linear"
+          class="sticky-header z-20 pr-6 py-4 bg-white w-full transition-all duration-300 ease-linear"
         >
           <div
             class="container mx-auto flex items-center transition-all duration-300 ease-in-out justify-between"
@@ -1186,7 +1189,7 @@
                 class="logo focus:outline-none mr-2 h-14 w-44 sm:h-16 sm:w-40"
               >
                 <img
-                id="main-logo"
+                  id="main-logo"
                   class="w-full h-full object-contain rounded"
                   src="./assets/images/logo.webp"
                   alt="logo"
@@ -1336,39 +1339,36 @@
 
     <!-- Sliders -->
     <div
-      class="sliders w-full transition-all duration-1000 ease-linear bg-gradient-to-br from-[var(--header-bg-color)] to-orange-600"
+      class="container mx-auto "
     >
-      <div class="container mx-auto py-4">
-        <div class="fade relative">
-          <div class="slide transition-all duration-700 ease-linear">
+      <div class="relative mx-auto mb-10 mt-4 px-8">
+      
+        <div class="fade relative rounded-[40px] shadow-2xl shadow-black/60 lg:px-10 bg-no-repeat bg-cover"
+        style="background-image: url(./assets/images/bg-tech.jpg);"
+        >
+          <div>
             <div
               class="p-8 sm:p-9 md:p-10 flex flex-col lg:flex-row justify-between items-center transition-all duration-1000 z-10 pr-4"
             >
               <div class="lg:w-1/2 flex flex-col justify-center">
                 <h1
-                  class="title text-3xl sm:text-4xl md:text-5xl leading-tight sm:leading-tight md:leading-tight text-white lg:w-11/12"
+                  class="title font-black text-3xl sm:text-4xl md:text-5xl leading-tight sm:leading-tight md:leading-tight text-white lg:w-11/12"
                   data-effect="scaleDown"
                 >
-                  <span class="font-black text-color uppercase"
+                  <span class="font-black text-orange-500 uppercase"
                     >Smartphone</span
                   >
                   Repair
                 </h1>
                 <p
-                  class="description text-lg sm:text-xl leading-normal text-white mt-4"
+                  class="description text-lg sm:text-xl leading-normal text-gray-300 mt-4"
                 >
                   Get your phone back in its prime condition with our fast and
                   reliable mobile phone repair services.
-                  <!-- Whether you have a
-                    cracked screen, battery issues, or software glitches, our
-                    skilled technicians are here to provide professional phone
-                    repair services. Trust JustRepair to get your phone up and
-                    running in no time. Data Backup & Recovery Services at their
-                    best -->
                 </p>
                 <div class="mt-8 md:mt-16 slider-cta-btn">
                   <button
-                    class="px-4 py-2 bg-white rounded text-base border border-orange-500 font-semibold text-orange-500 focus:outline-none focus:ring-white hover:bg-orange-500 hover:text-white hover:shadow-lg shadow-white/90"
+                    class="px-4 py-2 bg-gradient-to-r from-orange-500 to-red-500 rounded-full hover:scale-95 transition  text-base border border-orange-500 text-white focus:outline-none focus:ring-white hover:bg-orange-500 hover:text-white hover:shadow-lg shadow-white/90"
                     onclick="openInquiryForm();"
                   >
                     Send an Inquiry to Us
@@ -1390,20 +1390,20 @@
               </div>
             </div>
           </div>
-          <div class="slide transition-all duration-100">
+          <div>
             <div
               class="w-full h-full p-8 sm:p-9 md:p-10 flex flex-col lg:flex-row justify-between items-center transition-all duration-1000 z-10 pr-4"
             >
               <div class="lg:w-1/2 flex flex-col justify-center">
                 <h1
-                  class="title text-3xl sm:text-4xl md:text-5xl leading-tight sm:leading-tight md:leading-tight text-white lg:w-11/12"
+                  class="title font-black text-3xl sm:text-4xl md:text-5xl leading-tight sm:leading-tight md:leading-tight text-white lg:w-11/12"
                   data-effect="scaleDown"
                 >
-                  <span class="font-black text-color uppercase">Tablets</span>
+                  <span class="font-black text-orange-500 uppercase">Tablets</span>
                   Repair
                 </h1>
                 <p
-                  class="description text-lg sm:text-xl leading-normal text-white mt-4"
+                  class="description text-lg sm:text-xl leading-normal text-gray-300 mt-4"
                 >
                   Having issues with your tablet? Don't worry, Revive your
                   tablet's performance with our best tablet repair services at
@@ -1411,7 +1411,7 @@
                 </p>
                 <div class="mt-8 md:mt-16 slider-cta-btn">
                   <button
-                    class="px-4 py-2 bg-white rounded text-base border border-orange-500 font-semibold text-orange-500 focus:outline-none focus:ring-white hover:bg-orange-500 hover:text-white hover:shadow-lg shadow-white/90"
+                    class="px-4 py-2 bg-gradient-to-tr from-orange-500 to-red-500 rounded-full hover:scale-95 transition  text-base border border-orange-500 text-white focus:outline-none focus:ring-white hover:bg-orange-500 hover:text-white hover:shadow-lg shadow-white/90"
                     onclick="openInquiryForm();"
                   >
                     Send an Inquiry to Us
@@ -1438,14 +1438,14 @@
             >
               <div class="lg:w-1/2 flex flex-col justify-center">
                 <h1
-                  class="title text-3xl sm:text-4xl md:text-5xl leading-tight sm:leading-tight md:leading-tight text-white lg:w-11/12"
+                  class="title font-black text-3xl sm:text-4xl md:text-5xl leading-tight sm:leading-tight md:leading-tight text-white lg:w-11/12"
                   data-effect="scaleDown"
                 >
-                  <span class="font-black text-color uppercase">Laptop</span>
+                  <span class="font-black text-orange-500 uppercase">Laptop</span>
                   Repair
                 </h1>
                 <p
-                  class="description text-lg sm:text-xl leading-normal text-white mt-4"
+                  class="description text-lg sm:text-xl leading-normal text-gray-300 mt-4"
                 >
                   Your laptop is a vital tool for work, study, and
                   entertainment. When it encounters problems, rely on Just
@@ -1453,7 +1453,7 @@
                 </p>
                 <div class="mt-8 md:mt-16 slider-cta-btn">
                   <button
-                    class="px-4 py-2 bg-white rounded text-base border border-orange-500 font-semibold text-orange-500 focus:outline-none focus:ring-white hover:bg-orange-500 hover:text-white hover:shadow-lg shadow-white/90"
+                    class="px-4 py-2 bg-gradient-to-tr from-orange-500 to-red-500 rounded-full hover:scale-95 transition  text-base border border-orange-500 text-white focus:outline-none focus:ring-white hover:bg-orange-500 hover:text-white hover:shadow-lg shadow-white/90"
                     onclick="openInquiryForm();"
                   >
                     Send an Inquiry to Us
@@ -1480,16 +1480,16 @@
             >
               <div class="lg:w-1/2 flex flex-col justify-center">
                 <h1
-                  class="title text-3xl sm:text-4xl md:text-5xl leading-tight sm:leading-tight md:leading-tight text-white lg:w-11/12"
+                  class="title font-black text-3xl sm:text-4xl md:text-5xl leading-tight sm:leading-tight md:leading-tight text-white lg:w-11/12"
                   data-effect="scaleDown"
                 >
-                  <span class="font-black text-color uppercase"
+                  <span class="font-black text-orange-500 uppercase"
                     >SmartWatch</span
                   >
                   Repair
                 </h1>
                 <p
-                  class="description text-lg sm:text-xl leading-normal text-white mt-4"
+                  class="description text-lg sm:text-xl leading-normal text-gray-300 mt-4"
                 >
                   Don't allow a broken smartwatch to ruin your connected
                   lifestyle. At JustRepair, we specialize in smartwatch repair
@@ -1497,7 +1497,7 @@
                 </p>
                 <div class="mt-8 md:mt-16 slider-cta-btn">
                   <button
-                    class="px-4 py-2 bg-white rounded text-base border border-orange-500 font-semibold text-orange-500 focus:outline-none focus:ring-white hover:bg-orange-500 hover:text-white hover:shadow-lg shadow-white/90"
+                    class="px-4 py-2 bg-gradient-to-tr from-orange-500 to-red-500 rounded-full hover:scale-95 transition  text-base border border-orange-500 text-white focus:outline-none focus:ring-white hover:bg-orange-500 hover:text-white hover:shadow-lg shadow-white/90"
                     onclick="openInquiryForm();"
                   >
                     Send an Inquiry to Us
@@ -1524,16 +1524,16 @@
             >
               <div class="lg:w-1/2 flex flex-col justify-center">
                 <h1
-                  class="title text-3xl sm:text-4xl md:text-5xl leading-tight sm:leading-tight md:leading-tight text-white lg:w-11/12"
+                  class="title font-black text-3xl sm:text-4xl md:text-5xl leading-tight sm:leading-tight md:leading-tight text-white lg:w-11/12"
                   data-effect="scaleDown"
                 >
-                  <span class="font-black text-color uppercase"
+                  <span class="font-black text-orange-500 uppercase"
                     >Gaming Console</span
                   >
                   Repair
                 </h1>
                 <p
-                  class="description text-lg sm:text-xl leading-normal text-white mt-4"
+                  class="description text-lg sm:text-xl leading-normal text-gray-300 mt-4"
                 >
                   Don't let a faulty gaming console interrupt your gaming
                   adventures. JustRepair offers comprehensive repair services
@@ -1541,7 +1541,7 @@
                 </p>
                 <div class="mt-8 md:mt-16 slider-cta-btn">
                   <button
-                    class="px-4 py-2 bg-white rounded text-base border border-orange-500 font-semibold text-orange-500 focus:outline-none focus:ring-white hover:bg-orange-500 hover:text-white hover:shadow-lg shadow-white/90"
+                    class="px-4 py-2 bg-gradient-to-tr from-orange-500 to-red-500 rounded-full hover:scale-95 transition  text-base border border-orange-500 text-white focus:outline-none focus:ring-white hover:bg-orange-500 hover:text-white hover:shadow-lg shadow-white/90"
                     onclick="openInquiryForm();"
                   >
                     Send an Inquiry to Us
@@ -1568,27 +1568,21 @@
             >
               <div class="lg:w-1/2 flex flex-col justify-center">
                 <h1
-                  class="title text-3xl sm:text-4xl md:text-5xl leading-tight sm:leading-tight md:leading-tight text-white lg:w-11/12"
+                  class="title font-black text-3xl sm:text-4xl md:text-5xl leading-tight sm:leading-tight md:leading-tight text-white lg:w-11/12"
                   data-effect="scaleDown"
                 >
-                  <span class="font-black text-color uppercase">Printer</span>
+                  <span class="font-black text-orange-500 uppercase">Printer</span>
                   Repair
                 </h1>
                 <p
-                  class="description text-lg sm:text-xl leading-normal text-white mt-4"
+                  class="description text-lg sm:text-xl leading-normal text-gray-300 mt-4"
                 >
                   Rediscover the power of flawless printing with our expert
                   printer repair services. we are your ultimate solution.
-                  <!-- Our seasoned technicians specialize
-                    in diagnosing and rectifying an extensive array of printer
-                    complications. 
-                    From vexing paper jams and vexatious
-                    connectivity hitches to perplexing print quality degradation
-                    and confounding error codes, we are your ultimate solution. -->
                 </p>
                 <div class="mt-8 md:mt-16 slider-cta-btn">
                   <button
-                    class="px-4 py-2 bg-white rounded text-base border border-orange-500 font-semibold text-orange-500 focus:outline-none focus:ring-white hover:bg-orange-500 hover:text-white hover:shadow-lg shadow-white/90"
+                    class="px-4 py-2 bg-gradient-to-tr from-orange-500 to-red-500 rounded-full hover:scale-95 transition  text-base border border-orange-500 text-white focus:outline-none focus:ring-white hover:bg-orange-500 hover:text-white hover:shadow-lg shadow-white/90"
                     onclick="openInquiryForm();"
                   >
                     Send an Inquiry to Us
@@ -1615,27 +1609,21 @@
             >
               <div class="lg:w-1/2 flex flex-col justify-center">
                 <h1
-                  class="title text-3xl sm:text-4xl md:text-5xl leading-tight sm:leading-tight md:leading-tight text-white lg:w-11/12"
+                  class="title font-black text-3xl sm:text-4xl md:text-5xl leading-tight sm:leading-tight md:leading-tight text-white lg:w-11/12"
                   data-effect="scaleDown"
                 >
-                  <span class="font-black text-color uppercase">Camera</span>
+                  <span class="font-black text-orange-500 uppercase">Camera</span>
                   Repair
                 </h1>
                 <p
-                  class="description text-lg sm:text-xl leading-normal text-white mt-4"
+                  class="description text-lg sm:text-xl leading-normal text-gray-300 mt-4"
                 >
                   Discover top-notch camera repair services that breathe new
                   life into your beloved photographic equipment. Our skilled
-                  <!-- technicians specialize in diagnosing and restoring a wide
-                    range of camera models, from vintage classics to cutting-edge
-                    digital systems. Whether your camera is suffering from lens
-                    issues, sensor malfunctions, shutter problems, or any other
-                    technical glitch, our dedicated team is equipped with the
-                    expertise to efficiently diagnose and repair the issue. -->
                 </p>
                 <div class="mt-8 md:mt-16 slider-cta-btn">
                   <button
-                    class="px-4 py-2 bg-white rounded text-base border border-orange-500 font-semibold text-orange-500 focus:outline-none focus:ring-white hover:bg-orange-500 hover:text-white hover:shadow-lg shadow-white/90"
+                    class="px-4 py-2 bg-gradient-to-tr from-orange-500 to-red-500 rounded-full hover:scale-95 transition  text-base border border-orange-500 text-white focus:outline-none focus:ring-white hover:bg-orange-500 hover:text-white hover:shadow-lg shadow-white/90"
                     onclick="openInquiryForm();"
                   >
                     Send an Inquiry to Us
@@ -1657,9 +1645,11 @@
             </div>
           </div>
         </div>
+        <button id="nextBtn" class="absolute z-10 top-[50%] right-16 font-bold text-sm text-white/60">2</button>
       </div>
     </div>
 
+    <!-- Services -->
     <div
       class="py-16 lg:py-32 px-8 bg-gradient-to-tr from-orange-100 to-orange-200 overflow-x-hidden"
     >

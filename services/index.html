@@ -388,13 +388,15 @@
       <div
         id="inquiry-form"
         class="-translate-x-full transition-all duration-500 ease-in-out relative w-full"
-        >
+      >
         <div
-        class="relative flex flex-col md:2/3 xl:w-1/2 border bg-white h-screen overflow-y-scroll shadow-lg p-2 sm:p-6"
+          class="relative flex flex-col md:2/3 xl:w-1/2 bg-white h-screen overflow-y-scroll shadow-lg"
         >
-        <div class="absolute inset-0 blur-sm" style="background-image: url(../assets/images/pngegg.png);"></div>
-          <div class="rounded bg-white/90 relative shadow mt-4 sm:mt-2 pb-7">
-
+          <div
+            class="p-2 sm:p-6"
+            style="background-image: url(../assets/images/orange-bg.svg)"
+          >
+          <div class="rounded bg-white/80 relative shadow mt-4 sm:mt-2 pb-7">
             <div class="w-full rounded bg-gray-50/40">
               <div class="flex items-center justify-between w-full px-5 py-4">
                 <span
@@ -417,39 +419,39 @@
                     </svg>
 
                     <p
-                      class="text-base font-medium leading-none text-orange-500 "
+                      class="text-base font-medium leading-none text-orange-500"
                     >
                       Quick Inquiry
                     </p>
                   </div>
                   <button
-            onclick="closeInquiryForm()"
-            aria-label="close inquiry form"
-            class="self-end"
-          >
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 20 20"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M15 5L5 15"
-                stroke="#000000"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M5 5L15 15"
-                stroke="#000000"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </button>
+                    onclick="closeInquiryForm()"
+                    aria-label="close inquiry form"
+                    class="self-end"
+                  >
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M15 5L5 15"
+                        stroke="#000000"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M5 5L15 15"
+                        stroke="#000000"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
                 </span>
               </div>
             </div>
@@ -683,6 +685,7 @@
               </button>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </div>
@@ -1175,7 +1178,7 @@
       </div>
       <div class="header-parent">
         <div
-          class="sticky-header pr-6 py-4 bg-white w-full transition-all duration-300 ease-linear"
+          class="sticky-header z-20 pr-6 py-4 bg-white w-full transition-all duration-300 ease-linear"
         >
           <div
             class="container mx-auto flex items-center transition-all duration-300 ease-in-out justify-between"
@@ -1188,7 +1191,7 @@
               >
                 <img
                   id="main-logo"
-                  class="w-full h-full object-contain rounded transition-all duration-300 ease-in-out "
+                  class="w-full h-full object-contain rounded transition-all duration-300 ease-in-out"
                   src="../assets/images/logo.webp"
                   alt="logo"
                 />
@@ -1335,29 +1338,38 @@
       </div>
     </div>
 
-
-     <!-- Form inside phone section -->
-     <div class="flex">
-      <div class="container mx-auto">
-        <div class="h-[580px] sm:h-[620px] w-[320px] sm:w-auto mx-auto">
-          <h2 class="scaleDown text-center font-bold mt-10 text-2xl">
-            Device Repair
-          </h2>
+    <!-- Form inside phone section -->
+    <div class="container mx-auto text-center relative">
+      <div class="absolute mx-auto w-full h-full bg-cover -z-10" style="background-image: url(../assets/images/orange-bg.svg);"></div>
+      <h2 class="text-2xl md:text-3xl font-bold leading-normal pt-10 px-8">Easy Solutions for Your Device Troubles</h2>
+      <p class="mt-4 text-sm max-w-screen-md mx-auto px-8">
+        Welcome to our mobile device repair page, where we make fixing your
+        phone hassle-free. From cracked screens to sluggish software, our
+        expert technicians are ready to help. Simply fill out the form below
+        to get in touch with us and say goodbye to your phone problems!
+      </p>
+      <div class="lg:flex lg:items-center lg:px-10">
+        <div class="w-full lg:w-1/5 px-2 lg:block hidden">
+          <img
+            src="../assets/images/Digital Marketing of Electronic Devices.gif"
+          />
+        </div>
+        <div
+          class="mt-10 h-[580px] sm:h-[620px] w-[320px] sm:w-auto mx-auto lg:w-3/5"
+        >
           <div
             class="mx-auto -mt-8 sm:-mt-20 flex flex-col w-full items-center h-full bg-no-repeat bg-cover sm:bg-contain bg-center"
             style="background-image: url(../assets/images/bgs/Iphone.png)"
           >
             <div
-              class="w-[175px] h-[379px] sm:w-[188px] sm:h-[405px] bg-white/40 scrollbar-hide overflow-scroll rounded-3xl ml-[124px] sm:ml-[132px] mt-[114px] sm:mt-[122px]"
+              class="w-[175px] h-[379px] sm:w-[188px] sm:h-[405px] bg-white/80 scrollbar-hide overflow-scroll rounded-3xl ml-[124px] sm:ml-[132px] mt-[114px] sm:mt-[122px]"
             >
               <div class="rounded shadow mt-4 sm:mt-2 pb-7">
                 <div class="w-full mt-10 rounded bg-gray-50/30">
                   <div
                     class="flex items-center justify-between w-full px-5 py-4"
                   >
-                    <span
-                      class=" text-sm font-medium text-orange-500 gap-x-2"
-                    >
+                    <span class="text-sm font-medium text-orange-500 gap-x-2">
                       <div class="flex gap-x-2">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -1383,7 +1395,7 @@
                     </span>
                   </div>
                 </div>
-                <div class="md-logo mx-auto focus:outline-none h-14 w-40">
+                <div class="md-logo mx-auto focus:outline-none h-14 w-40 mt-6">
                   <img
                     class="w-full h-full object-contain rounded"
                     src="../assets/images/logo.webp"
@@ -1393,9 +1405,7 @@
                 <div class="mt-10 px-2">
                   <div class="grid w-full grid-cols-1 gap-7 mt-7">
                     <div class="">
-                      <p
-                        class="text-sm font-medium leading-none text-gray-800"
-                      >
+                      <p class="text-sm font-medium leading-none text-gray-800">
                         Device Type <span class="text-red-500">*</span>
                       </p>
                       <div class="relative text-sm top-1">
@@ -1422,9 +1432,7 @@
                       </p>
                     </div>
                     <div>
-                      <p
-                        class="text-sm font-medium leading-none text-gray-800"
-                      >
+                      <p class="text-sm font-medium leading-none text-gray-800">
                         Select your Device <span class="text-red-500">*</span>
                       </p>
                       <div class="relative text-sm top-1">
@@ -1449,9 +1457,7 @@
                       </p>
                     </div>
                     <div>
-                      <p
-                        class="text-sm font-medium leading-none text-gray-800"
-                      >
+                      <p class="text-sm font-medium leading-none text-gray-800">
                         Select Service <span class="text-red-500">*</span>
                       </p>
                       <div class="relative top-1 text-sm">
@@ -1501,9 +1507,7 @@
                       </p>
                     </div>
                     <div class="text-sm">
-                      <p
-                        class="font-medium leading-none text-gray-800"
-                      >
+                      <p class="font-medium leading-none text-gray-800">
                         Issue name (if selected other)
                         <span class="text-red-500">*</span>
                       </p>
@@ -1570,9 +1574,7 @@
                 <div class="mt-10 px-2">
                   <div class="grid w-full grid-cols-1 gap-7 mt-7">
                     <div class="">
-                      <p
-                        class="text-sm font-medium leading-none text-gray-800"
-                      >
+                      <p class="text-sm font-medium leading-none text-gray-800">
                         Full Name <span class="text-red-500">*</span>
                       </p>
                       <div class="relative top-1">
@@ -1583,9 +1585,7 @@
                       </div>
                     </div>
                     <div class="">
-                      <p
-                        class="text-sm font-medium leading-none text-gray-800"
-                      >
+                      <p class="text-sm font-medium leading-none text-gray-800">
                         Phone Number <span class="text-red-500">*</span>
                       </p>
                       <div class="relative top-1">
@@ -1596,9 +1596,7 @@
                       </div>
                     </div>
                     <div class="">
-                      <p
-                        class="text-sm font-medium leading-none text-gray-800"
-                      >
+                      <p class="text-sm font-medium leading-none text-gray-800">
                         Email <span class="text-red-500">*</span>
                       </p>
                       <div class="relative top-1">
@@ -1609,9 +1607,7 @@
                       </div>
                     </div>
                     <div class="">
-                      <p
-                        class="text-sm font-medium leading-none text-gray-800"
-                      >
+                      <p class="text-sm font-medium leading-none text-gray-800">
                         Full Address <span class="text-red-500">*</span>
                       </p>
                       <div class="relative top-1">
@@ -1637,13 +1633,19 @@
             </div>
           </div>
         </div>
+        <div class="w-full lg:w-1/5 px-2">
+          <img
+            class="mx-auto"
+            src="../assets/images/Digital Marketing of Electronic Devices.gif"
+          />
+        </div>
       </div>
     </div>
 
     <!-- Other Phones -->
 
     <div
-      class="container mx-auto mt-10 px-4 pt-10 pb-16 md:pt-20 md:pb-10 lg:pt-12 lg:pb-12"
+      class="container mx-auto mt-10 px-8 lg:px-12 pt-10 pb-16 md:pt-20 md:pb-10 lg:pt-12 lg:pb-12"
     >
       <h2
         class="scaleDown text-2xl md:text-3xl font-bold leading-normal text-orange-500 text-center"
@@ -2321,17 +2323,21 @@
 
     <!-- Faqs -->
     <div class="bg-indigo-50 pt-6 md:pt-12 lg:pt-24">
-      <div
-        class="container mx-auto pb-24 px-4 md:px-6 flex flex-col justify-center items-center"
-      >
-        <div class="mx-auto px-5 min-h-sceen">
-          <div class="flex flex-col items-center">
-            <h2 class="font-bold text-5xl mt-5 tracking-tight">FAQ</h2>
-            <p class="text-neutral-500 text-xl mt-3">
-              Frequenty asked questions
-            </p>
+      <div class="container mt-10 py-20 px-8 lg:px-12">
+        <div class="flex flex-col lg:flex-row justify-around gap-6 lg:gap-10">
+          <div class="">
+            <h2
+              tabindex="{0}"
+              class="focus:outline-none text-center text-2xl lg:text-3xl font-extrabold leading-9 text-brand-primary tracking-1px"
+            >
+              Why is JUSTREPAIR Special?
+            </h2>
+            <div class="h-72 w-72 md:h-96 md:w-96">
+              <img src="../assets/images/CreativeTeam.gif" alt="gif" />
+            </div>
           </div>
-          <div class="grid divide-y divide-neutral-200 max-w-xl mx-auto mt-8">
+
+          <div class="grid divide-y divide-neutral-200 max-w-xl">
             <div class="py-5">
               <details class="group">
                 <summary
@@ -3193,5 +3199,6 @@
     <script type="text/javascript" src="../assets/slick/slick.min.js"></script>
     <!-- <script src="https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script> -->
     <script src="../assets/scripts/index.js"></script>
+    <script src="../assets/scripts/deeperfile.js"></script>
   </body>
 </html>

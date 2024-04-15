@@ -1,25 +1,25 @@
 // Slick Slider settings
 $(document).ready(function () {
   const slides = [...document.querySelectorAll(".fade > div")];
-  gsap.from(".title", {
-    x: -300,
-    duration: 1,
-  });
-  gsap.from(".description", {
-    x: 300,
-    duration: 1,
-  });
-  gsap.from(".slider-cta-btn", {
-    opacity: 0,
-    scale: 0,
-    x: -100,
-    duration: 0.5,
-    delay: 0.5,
-  });
+  // gsap.from(".title", {
+  //   x: -300,
+  //   duration: 1,
+  // });
+  // gsap.from(".description", {
+  //   x: 300,
+  //   duration: 1,
+  // });
+  // gsap.from(".slider-cta-btn", {
+  //   opacity: 0,
+  //   scale: 0,
+  //   x: -100,
+  //   duration: 0.5,
+  //   delay: 0.5,
+  // });
 
   let i = 0;
   let speed = 150;
-  let title = slides[0].querySelector(".title").children[0].innerHTML;
+  let title = slides[0]?.querySelector(".title")?.children[0]?.innerHTML;
   slides[0].querySelector(".title").children[0].innerHTML = "";
   function typeWriter() {
     if (i < title.length) {
@@ -31,7 +31,6 @@ $(document).ready(function () {
   }
 
   typeWriter();
-  // console.log(slides[0].children[0].children[0].children[0])
 
   $(".fade")
     .slick({
@@ -41,41 +40,42 @@ $(document).ready(function () {
       fade: true,
       dots: false,
       autoplay: true,
-      arrows: false,
-      autoplaySpeed: 5000,
+      arrows: true,
+      prevArrow: $("#prevBtn"),
+      nextArrow: $("#nextBtn")
     })
     .on("beforeChange", function (event, slick, currentSlide, nextSlide) {
+      $("#nextBtn").html( nextSlide +2 );
+
       // gsap.from(".title", {
       //   x: -300,
       //   duration: 1,
-      //   toggleActions: "restart none none none",
       // });
       // gsap.from(".description", {
-      //   x: 300,
+      //   y: -50,
+      //   opacity: 0,
+      //   delay: 0.5,
       //   duration: 1,
-      //   toggleActions: "restart none none none",
       // });
       // gsap.from(".slider-cta-btn", {
       //   opacity: 0,
-      //   scale: 0,
-      //   x: -100,
+      //   y: -40,
       //   duration: 0.5,
-      //   delay: 0.5,
-      //   toggleActions: "restart none none none",
+      //   delay: 0.7,
       // });
 
-      const headerColors = [
-        "#c2410c",
-        "#4d7c0f",
-        "#a16207",
-        "#9333ea",
-        "#c026d3",
-        "#db2777",
-        "#e11d48",
-      ];
-      document
-        .querySelector(":root")
-        .style.setProperty("--header-bg-color", headerColors[nextSlide]);
+      // const headerColors = [
+      //   "#c2410c",
+      //   "#4d7c0f",
+      //   "#a16207",
+      //   "#9333ea",
+      //   "#c026d3",
+      //   "#db2777",
+      //   "#e11d48",
+      // ];
+      // document
+      //   .querySelector(":root")
+      //   .style.setProperty("--header-bg-color", headerColors[nextSlide]);
       let title =
         slides[nextSlide].querySelector(".title").children[0].innerHTML;
       slides[nextSlide].querySelector(".title").children[0].innerHTML = "";
@@ -92,6 +92,8 @@ $(document).ready(function () {
 
       setTimeout(typeWriter, 500);
     });
+
+  // Number Counter Up
   $(".counter").counterUp({ time: 2000 });
 });
 
@@ -180,20 +182,35 @@ const closeMenu = () => {
   document.getElementById("md-menu").classList.toggle("-translate-x-full");
 };
 
-
 const inquiryHoverly = document.getElementById("inquiry-hoverly");
 const inquiryForm = document.getElementById("inquiry-form");
 
 const openInquiryForm = () => {
-  inquiryHoverly.classList.remove("bg-gray-800/0", "pointer-events-none", "backdrop-blur-none");
-  inquiryHoverly.classList.add("bg-gray-800/70", "pointer-events-auto", 'backdrop-blur-sm');
+  inquiryHoverly.classList.remove(
+    "bg-gray-800/0",
+    "pointer-events-none",
+    "backdrop-blur-none"
+  );
+  inquiryHoverly.classList.add(
+    "bg-gray-800/70",
+    "pointer-events-auto",
+    "backdrop-blur-sm"
+  );
   inquiryForm.classList.remove("-translate-x-full");
   inquiryForm.classList.add("translate-x-0");
 };
 
 const closeInquiryForm = () => {
-  inquiryHoverly.classList.remove("bg-gray-800/70", "pointer-events-auto", 'backdrop-blur-sm');
-  inquiryHoverly.classList.add("bg-gray-800/0", "pointer-events-none", "backdrop-blur-none");
+  inquiryHoverly.classList.remove(
+    "bg-gray-800/70",
+    "pointer-events-auto",
+    "backdrop-blur-sm"
+  );
+  inquiryHoverly.classList.add(
+    "bg-gray-800/0",
+    "pointer-events-none",
+    "backdrop-blur-none"
+  );
   inquiryForm.classList.add("-translate-x-full");
   inquiryForm.classList.remove("translate-x-0");
 };
@@ -202,16 +219,32 @@ const enquiryPopupBg = document.getElementById("enquiry-popup-bg");
 const enquiryPopupForm = document.getElementById("enquiry-popup-form");
 
 const openInquiryPopup = () => {
-  enquiryPopupBg.classList.remove("bg-gray-800/0", "pointer-events-none", "backdrop-blur-none");
-  enquiryPopupBg.classList.add("bg-gray-800/40", "pointer-events-auto", 'backdrop-blur-sm');
-  enquiryPopupForm.classList.add("scale-100")
-  enquiryPopupForm.classList.remove("scale-0")
+  enquiryPopupBg.classList.remove(
+    "bg-gray-800/0",
+    "pointer-events-none",
+    "backdrop-blur-none"
+  );
+  enquiryPopupBg.classList.add(
+    "bg-gray-800/40",
+    "pointer-events-auto",
+    "backdrop-blur-sm"
+  );
+  enquiryPopupForm.classList.add("scale-100");
+  enquiryPopupForm.classList.remove("scale-0");
 };
 const closeEnquiryPopup = () => {
-  enquiryPopupBg.classList.remove("bg-gray-800/40", "pointer-events-auto", 'backdrop-blur-sm');
-  enquiryPopupBg.classList.add("bg-gray-800/0", "pointer-events-none", "backdrop-blur-none");
-  enquiryPopupForm.classList.add("scale-0")
-  enquiryPopupForm.classList.remove("scale-100")
+  enquiryPopupBg.classList.remove(
+    "bg-gray-800/40",
+    "pointer-events-auto",
+    "backdrop-blur-sm"
+  );
+  enquiryPopupBg.classList.add(
+    "bg-gray-800/0",
+    "pointer-events-none",
+    "backdrop-blur-none"
+  );
+  enquiryPopupForm.classList.add("scale-0");
+  enquiryPopupForm.classList.remove("scale-100");
 };
 
 // stick header to top
@@ -223,22 +256,37 @@ document.onscroll = () => {
   let headerParent = document.querySelector(".header-parent");
   let body = document.querySelector("body");
   if (window.scrollY > headerParent.offsetTop) {
-    header.classList.remove("py-4", 'bg-white');
-    header.classList.add("fixed", "top-0", "shadow-lg", "z-10", 'py-2', 'bg-orange-500');
-    [...menuLink].map((item)=> {
-      item.style.setProperty('--priamry', 'white')
-    })
+    header.classList.remove("py-4", "bg-white");
+    header.classList.add(
+      "fixed",
+      "top-0",
+      "shadow-lg",
+      "z-10",
+      "py-2",
+      "bg-orange-500"
+    );
+    [...menuLink].map((item) => {
+      item.style.setProperty("--priamry", "white");
+    });
     body.style.paddingTop = header.offsetHeight + "px";
-    logo.src = '../assets/images/logo_light.png'
+   
+    logo.src = "./assets/images/logo_light.png";
   } else {
-    header.classList.add("py-4", 'bg-white');
-    header.classList.remove("fixed", "top-0", "shadow-lg", "z-10", 'py-2', 'bg-orange-500');
-    [...menuLink].map((item)=> {
-      item.style.setProperty('--priamry', '#f97316')
-    })
-    activeLink?.style?.setProperty('--priamry', '#f97316')
+    header.classList.add("py-4", "bg-white");
+    header.classList.remove(
+      "fixed",
+      "top-0",
+      "shadow-lg",
+      "z-10",
+      "py-2",
+      "bg-orange-500"
+    );
+    [...menuLink].map((item) => {
+      item.style.setProperty("--priamry", "#f97316");
+    });
+    activeLink?.style?.setProperty("--priamry", "#f97316");
     body.style.paddingTop = 0;
-    logo.src = '../assets/images/logo.webp'
+    logo.src = "./assets/images/logo.webp";
   }
 };
 
@@ -258,7 +306,6 @@ function flipCardBack(index) {
   inner.style.transform = "rotateY(0deg)";
 }
 // Flip cards end
-
 
 // requestAnimationFrame(raf);
 
@@ -518,21 +565,19 @@ document.addEventListener("DOMContentLoaded", function () {
   // linegrow animations end
 });
 
-
-
 // Gallry Image Change
-const selectedImage = document.querySelector("#selected-image")
+const selectedImage = document.querySelector("#selected-image");
 const thumbnails = document.querySelectorAll(".thumbnail");
 
 const changeImage = (e) => {
-  thumbnails.forEach(thumbnail => thumbnail.classList.remove("border", "border-orange-500"))
-  selectedImage.setAttribute("src", e.src)
-  e.classList.add("border", "border-orange-500")
-}
+  thumbnails.forEach((thumbnail) =>
+    thumbnail.classList.remove("border", "border-orange-500")
+  );
+  selectedImage.setAttribute("src", e.src);
+  e.classList.add("border", "border-orange-500");
+};
 
-// 
-
-
+//
 
 // Borken Phones Dropdown
 
@@ -552,4 +597,3 @@ elements.forEach((e) => {
     });
   });
 });
-

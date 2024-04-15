@@ -394,13 +394,15 @@
       <div
         id="inquiry-form"
         class="-translate-x-full transition-all duration-500 ease-in-out relative w-full"
-        >
+      >
         <div
-        class="relative flex flex-col md:2/3 xl:w-1/2 border bg-white h-screen overflow-y-scroll shadow-lg p-2 sm:p-6"
+          class="relative flex flex-col md:2/3 xl:w-1/2 bg-white h-screen overflow-y-scroll shadow-lg"
         >
-        <div class="absolute inset-0 blur-sm" style="background-image: url(../assets/images/pngegg.png);"></div>
-          <div class="rounded bg-white/90 relative shadow mt-4 sm:mt-2 pb-7">
-
+          <div
+            class="p-2 sm:p-6"
+            style="background-image: url(../assets/images/orange-bg.svg)"
+          >
+          <div class="rounded bg-white/80 relative shadow mt-4 sm:mt-2 pb-7">
             <div class="w-full rounded bg-gray-50/40">
               <div class="flex items-center justify-between w-full px-5 py-4">
                 <span
@@ -423,39 +425,39 @@
                     </svg>
 
                     <p
-                      class="text-base font-medium leading-none text-orange-500 "
+                      class="text-base font-medium leading-none text-orange-500"
                     >
                       Quick Inquiry
                     </p>
                   </div>
                   <button
-            onclick="closeInquiryForm()"
-            aria-label="close inquiry form"
-            class="self-end"
-          >
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 20 20"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M15 5L5 15"
-                stroke="#000000"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M5 5L15 15"
-                stroke="#000000"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </button>
+                    onclick="closeInquiryForm()"
+                    aria-label="close inquiry form"
+                    class="self-end"
+                  >
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M15 5L5 15"
+                        stroke="#000000"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M5 5L15 15"
+                        stroke="#000000"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
                 </span>
               </div>
             </div>
@@ -689,6 +691,7 @@
               </button>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </div>
@@ -1181,7 +1184,7 @@
       </div>
       <div class="header-parent">
         <div
-          class="sticky-header pr-6 py-4 bg-white w-full transition-all duration-300 ease-linear"
+          class="sticky-header z-20 pr-6 py-4 bg-white w-full transition-all duration-300 ease-linear"
         >
           <div
             class="container mx-auto flex items-center transition-all duration-300 ease-in-out justify-between"
@@ -2110,5 +2113,6 @@
     <script type="text/javascript" src="../assets/slick/slick.min.js"></script>
     <!-- <script src="https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script> -->
     <script src="../assets/scripts/index.js"></script>
+    <script src="../assets/scripts/deeperfile.js"></script>
   </body>
 </html>
