@@ -20,17 +20,19 @@ $(document).ready(function () {
   let i = 0;
   let speed = 150;
   let title = slides[0]?.querySelector(".title")?.children[0]?.innerHTML;
-  slides[0].querySelector(".title").children[0].innerHTML = "";
-  function typeWriter() {
-    if (i < title.length) {
-      slides[0].querySelector(".title").children[0].innerHTML +=
-        title.charAt(i);
-      i++;
-      setTimeout(typeWriter, speed);
+  if (title) {
+    slides[0].querySelector(".title").children[0].innerHTML = "";
+    function typeWriter() {
+      if (i < title.length) {
+        slides[0].querySelector(".title").children[0].innerHTML +=
+          title.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
     }
+    typeWriter();
   }
 
-  typeWriter();
 
   $(".fade")
     .slick({
@@ -595,5 +597,51 @@ elements.forEach((e) => {
         item.parentElement.children[1].classList.remove("font-medium");
       }
     });
+  });
+});
+
+
+// Get the button
+const backtoTop = document.getElementById("btn-back-to-top");
+
+// When the user scrolls down 20px from the top of the document, show the button
+
+const scrollFunction = () => {
+  if (
+    document.body.scrollTop > 20 ||
+    document.documentElement.scrollTop > 20
+  ) {
+    backtoTop.classList.remove("hidden");
+  } else {
+    backtoTop.classList.add("hidden");
+  }
+};
+const backToTop = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
+// When the user clicks on the button, scroll to the top of the document
+backtoTop.addEventListener("click", backToTop);
+
+window.addEventListener("scroll", scrollFunction);
+
+
+// Faqs
+document.querySelectorAll('.send-button').forEach((button) => {
+  button.addEventListener('click', () => {
+    const questionId = button.parentNode.id;
+    const answerId = `a${questionId.slice(1)}`;
+    const selectedAnswer = document.getElementById(answerId)
+    if (!selectedAnswer.classList.contains('max-h-0')){
+      selectedAnswer.classList.toggle('scale-0')
+      setTimeout(()=> {
+        selectedAnswer.classList.toggle('max-h-0')
+      }, 200)
+    } else {
+      selectedAnswer.classList.toggle('max-h-0')
+      setTimeout(()=> {
+        selectedAnswer.classList.toggle('scale-0')
+      }, 100)
+    }
   });
 });

@@ -4,22 +4,22 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        montserrat: ['Montserrat', 'sans-serif'],
+        montserrat: ["Montserrat", "sans-serif"],
       },
-        keyframes: {
+      keyframes: {
         fadeIn: {
           "0%": { opacity: 0 },
           "100%": { opacity: 100 },
         },
       },
       animation: {
-        fadeIn: "fadeIn 0.2s ease-in-out forwards",
+        fadeIn: "fadeIn 0.6s ease-in-out forwards",
+        ringing: "oscillate-rotation 1s infinite ease-in-out"
       },
-    },
+    }
   },
   plugins: [
-    require('@tailwindcss/typography'),
-    require('tailwind-scrollbar-hide')
+    require("@tailwindcss/typography"),
+    require("tailwind-scrollbar-hide"),
   ],
-}
-
+};
