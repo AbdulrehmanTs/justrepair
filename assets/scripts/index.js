@@ -33,7 +33,6 @@ $(document).ready(function () {
     typeWriter();
   }
 
-
   $(".fade")
     .slick({
       infinite: true,
@@ -44,10 +43,10 @@ $(document).ready(function () {
       autoplay: true,
       arrows: true,
       prevArrow: $("#prevBtn"),
-      nextArrow: $("#nextBtn")
+      nextArrow: $("#nextBtn"),
     })
     .on("beforeChange", function (event, slick, currentSlide, nextSlide) {
-      $("#nextBtn").html( nextSlide +2 );
+      $("#nextBtn").html(nextSlide + 2);
 
       // gsap.from(".title", {
       //   x: -300,
@@ -99,51 +98,52 @@ $(document).ready(function () {
   $(".counter").counterUp({ time: 2000 });
 });
 
-const openSmMenu = () => {
-  document.getElementById("menu").classList.remove("-translate-x-full");
-  document.getElementById("menu").classList.add("translate-x-0");
-  // animations
-  gsap.from(".sm-menu-link", {
-    opacity: 0,
-    y: 100,
-    duration: 0.3,
-    ease: "back.inOut",
-    stagger: "0.2",
-  });
-  //
-  gsap.from(".sm-logo", {
-    opacity: 0,
-    scale: 0,
-    x: -100,
-    duration: 0.5,
-    delay: 0.5,
-    ease: "back.inOut",
-  });
+// const openSmMenu = () => {
+//   document.getElementById("menu").classList.remove("-translate-x-full");
+//   document.getElementById("menu").classList.add("translate-x-0");
+//   // animations
+//   gsap.from(".sm-menu-link", {
+//     opacity: 0,
+//     y: 100,
+//     duration: 0.3,
+//     ease: "back.inOut",
+//     stagger: "0.2",
+//   });
+//   //
+//   gsap.from(".sm-logo", {
+//     opacity: 0,
+//     scale: 0,
+//     x: -100,
+//     duration: 0.5,
+//     delay: 0.5,
+//     ease: "back.inOut",
+//   });
 
-  //
-  gsap.from(".sm-cta-btn", {
-    opacity: 0,
-    scale: 0,
-    x: -100,
-    duration: 0.5,
-    delay: 0.5,
-    ease: "back.inOut",
-    stagger: 0.2,
-  });
-};
-const closeSmMenu = () => {
-  document.getElementById("menu").classList.add("-translate-x-full");
-  document.getElementById("menu").classList.remove("translate-x-0");
-};
+//   //
+//   gsap.from(".sm-cta-btn", {
+//     opacity: 0,
+//     scale: 0,
+//     x: -100,
+//     duration: 0.5,
+//     delay: 0.5,
+//     ease: "back.inOut",
+//     stagger: 0.2,
+//   });
+// };
+// const closeSmMenu = () => {
+//   document.getElementById("menu").classList.add("-translate-x-full");
+//   document.getElementById("menu").classList.remove("translate-x-0");
+// };
+
+// Menu
+
+const menuHoverly = document.getElementById("menu-hoverly");
+const menu = document.getElementById("md-menu");
 
 const openMenu = () => {
-  document
-    .getElementById("menu-hoverly")
-    .classList.remove("bg-gray-800/0", "pointer-events-none");
-  document
-    .getElementById("menu-hoverly")
-    .classList.add("bg-gray-800/70", "pointer-events-auto");
-  document.getElementById("md-menu").classList.toggle("-translate-x-full");
+  menuHoverly.classList.remove("bg-gray-800/0", "pointer-events-none");
+  menuHoverly.classList.add("bg-gray-800/70", "pointer-events-auto");
+  menu.classList.toggle("-translate-x-full");
 
   // animations
   gsap.from(".md-menu-link", {
@@ -175,15 +175,19 @@ const openMenu = () => {
   });
 };
 const closeMenu = () => {
-  document
-    .getElementById("menu-hoverly")
-    .classList.add("bg-gray-800/0", "pointer-events-none");
-  document
-    .getElementById("menu-hoverly")
-    .classList.remove("bg-gray-800/70", "pointer-events-auto");
-  document.getElementById("md-menu").classList.toggle("-translate-x-full");
+  menuHoverly.classList.add("bg-gray-800/0", "pointer-events-none");
+  menuHoverly.classList.remove("bg-gray-800/70", "pointer-events-auto");
+  menu.classList.toggle("-translate-x-full");
 };
 
+// Close Menu on click outside
+menuHoverly.addEventListener("click", (event) => {
+  if (!menu.contains(event.target)) {
+    closeMenu();
+  }
+});
+
+// Inquiry Form
 const inquiryHoverly = document.getElementById("inquiry-hoverly");
 const inquiryForm = document.getElementById("inquiry-form");
 
@@ -216,6 +220,14 @@ const closeInquiryForm = () => {
   inquiryForm.classList.add("-translate-x-full");
   inquiryForm.classList.remove("translate-x-0");
 };
+
+// Close Inquery from on click outside
+inquiryHoverly.addEventListener("click", (event) => {
+  const clickedDeleteIcon = [...event.target.classList].includes('delete-icon')
+  if (!inquiryForm.contains(event.target) && !clickedDeleteIcon) {
+    closeInquiryForm();
+  }
+});
 
 const enquiryPopupBg = document.getElementById("enquiry-popup-bg");
 const enquiryPopupForm = document.getElementById("enquiry-popup-form");
@@ -271,7 +283,7 @@ document.onscroll = () => {
       item.style.setProperty("--priamry", "white");
     });
     body.style.paddingTop = header.offsetHeight + "px";
-   
+
     logo.src = "./assets/images/logo_light.png";
   } else {
     header.classList.add("py-4", "bg-white");
@@ -600,17 +612,13 @@ elements.forEach((e) => {
   });
 });
 
-
 // Get the button
 const backtoTop = document.getElementById("btn-back-to-top");
 
 // When the user scrolls down 20px from the top of the document, show the button
 
 const scrollFunction = () => {
-  if (
-    document.body.scrollTop > 20 ||
-    document.documentElement.scrollTop > 20
-  ) {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     backtoTop.classList.remove("hidden");
   } else {
     backtoTop.classList.add("hidden");
@@ -625,23 +633,57 @@ backtoTop.addEventListener("click", backToTop);
 
 window.addEventListener("scroll", scrollFunction);
 
-
 // Faqs
-document.querySelectorAll('.send-button').forEach((button) => {
-  button.addEventListener('click', () => {
+document.querySelectorAll(".send-button").forEach((button) => {
+  button.addEventListener("click", () => {
     const questionId = button.parentNode.id;
     const answerId = `a${questionId.slice(1)}`;
-    const selectedAnswer = document.getElementById(answerId)
-    if (!selectedAnswer.classList.contains('max-h-0')){
-      selectedAnswer.classList.toggle('scale-0')
-      setTimeout(()=> {
-        selectedAnswer.classList.toggle('max-h-0')
-      }, 200)
+    const selectedAnswer = document.getElementById(answerId);
+    if (!selectedAnswer.classList.contains("max-h-0")) {
+      selectedAnswer.classList.toggle("scale-0");
+      setTimeout(() => {
+        selectedAnswer.classList.toggle("max-h-0");
+      }, 200);
     } else {
-      selectedAnswer.classList.toggle('max-h-0')
-      setTimeout(()=> {
-        selectedAnswer.classList.toggle('scale-0')
-      }, 100)
+      selectedAnswer.classList.toggle("max-h-0");
+      setTimeout(() => {
+        selectedAnswer.classList.toggle("scale-0");
+      }, 100);
     }
   });
 });
+
+// Announcement bar
+const announcementBar = document.getElementById("announcement-bar");
+const announcementDismissBtn = document.getElementById("dismiss-announcement");
+
+announcementDismissBtn?.addEventListener("click", () => {
+  announcementBar.style.display = "none";
+});
+
+// New issue generator
+const issueInput = document.getElementById("issue-input");
+const issueInputContainer = document.getElementById("issue-input-container");
+const newIssueBtn = document.getElementById("new-issue-btn");
+const deleteIcon = `<button class="delete-icon ml-2" onclick="deleteIssue(this)"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-red-500 " >
+<path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
+</svg></button>
+`;
+
+var issueNumber = 2
+newIssueBtn.addEventListener("click", () => {
+  const newIssue = issueInput.cloneNode(true);
+  newIssue.querySelector("#issue-title").innerHTML =
+  `Issue (${issueNumber}) <span class="text-red-500 ml-1">*</span> ` + deleteIcon;
+  newIssue.id = "issue-input" + issueNumber;
+  issueInputContainer.appendChild(newIssue);
+  issueNumber += 1
+});
+
+
+function deleteIssue(icon){
+  let issue = icon.parentNode.parentNode.parentNode
+  setTimeout(()=> {
+    issue.remove()
+  }, 100)
+}
