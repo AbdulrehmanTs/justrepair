@@ -2264,6 +2264,10 @@ video {
   margin: 0.5rem;
 }
 
+.m-9 {
+  margin: 2.25rem;
+}
+
 .-mx-4 {
   margin-left: -1rem;
   margin-right: -1rem;
