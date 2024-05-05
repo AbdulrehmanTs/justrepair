@@ -461,7 +461,7 @@
 
             <div class="mt-10 px-2 sm:px-7">
               <div
-                class=" grid w-full grid-cols-1 lg:grid-cols-2 gap-7 mt-7"
+                class="grid w-full grid-cols-1 lg:grid-cols-2 gap-7 mt-7"
                 id="issue-input-container"
               >
                 <div class="">
@@ -516,7 +516,10 @@
                 </div>
                 <div id="issue-input" class="issue-input lg:col-span-2 mb-4">
                   <div>
-                    <p id="issue-title" class="text-base font-medium flex items-center leading-none text-gray-800">
+                    <p
+                      id="issue-title"
+                      class="text-base font-medium flex items-center leading-none text-gray-800"
+                    >
                       Select Issue <span class="text-red-500">*</span>
                     </p>
                     <div class="relative top-1">
@@ -550,7 +553,9 @@
                           <option value="Body Replacement">
                             Body Replacement
                           </option>
-                          <option value="Mic Replacement">Mic Replacement</option>
+                          <option value="Mic Replacement">
+                            Mic Replacement
+                          </option>
                           <option value="Charging Port Replacement">
                             Charging Port Replacement
                           </option>
@@ -563,7 +568,9 @@
                     </p>
                   </div>
                   <div>
-                    <p class="mt-3 text-base font-medium leading-none text-gray-800">
+                    <p
+                      class="mt-3 text-base font-medium leading-none text-gray-800"
+                    >
                       issue (if selected other)
                       <span class="text-red-500">*</span>
                     </p>
@@ -576,11 +583,15 @@
                     </p>
                   </div>
 
-                  <hr class="mt-6">
+                  <hr class="mt-6" />
                 </div>
-
               </div>
-              <button class="mt-4 flex items-center justify-center px-3 py-1.5 bg-gradient-to-tr from-orange-600 to-red-500 rounded-full hover:scale-95 transition text-base border border-orange-500 text-white focus:outline-none focus:ring-white hover:bg-orange-500 hover:text-white hover:shadow-lg shadow-white/90" id="new-issue-btn"> <span class="font-bold text-lg mr-1">+</span> Issue</button>
+              <button
+                class="mt-4 flex items-center justify-center px-3 py-1.5 bg-gradient-to-tr from-orange-600 to-red-500 rounded-full hover:scale-95 transition text-base border border-orange-500 text-white focus:outline-none focus:ring-white hover:bg-orange-500 hover:text-white hover:shadow-lg shadow-white/90"
+                id="new-issue-btn"
+              >
+                <span class="font-bold text-lg mr-1">+</span> Issue
+              </button>
               <div class="pt-10 border-gray-300 mt-2">
                 <p class="text-base font-semibold text-gray-800">
                   Write down the details about your issue
@@ -701,9 +712,9 @@
 
     <!-- Header Navigations -->
     <div class="relative divide-y divide-gray-50 bg-white">
-      <!-- Announcement bar -->
+      <!-- Announcement bar desktop -->
       <div
-        class="relative isolate flex items-center gap-x-6 overflow-hidden bg-gray-50 px-6 py-3 sm:pt-2.5 sm:px-3.5 sm:before:flex-1"
+        class="relative isolate flex items-center gap-x-6 overflow-hidden bg-gray-50 px-6 py-2.5 sm:px-3.5"
         id="announcement-bar"
       >
         <div
@@ -762,36 +773,17 @@
             "
           ></div>
         </div>
-        <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
-          <p class="text-sm leading-6 text-gray-900">
+        <div class="mx-auto flex items-center gap-x-4 gap-y-1 md:gap-y-2">
+          <p class="text-[10px] md:text-sm text-gray-900">
             <strong class="font-semibold">Mother's Day</strong>
-            <span class="mx-2">&bull;</span> special 20% discount on all mobile
+            <span class="mx-1">&bull;</span> special 20% discount on all mobile
             screen repairs this Mother's Day!
           </p>
           <a
             href="./services/index.html"
-            class="flex-none rounded-full bg-gray-900 px-3.5 py-1 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
+            class="flex-none rounded-full bg-gray-900 px-3.5 py-1 text-[10px] md:text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
             >Avail now <span aria-hidden="true">&rarr;</span></a
           >
-        </div>
-        <div class="flex flex-1 justify-end">
-          <button
-            id="dismiss-announcement"
-            type="button"
-            class="-m-3 p-3 focus-visible:outline-offset-[-4px]"
-          >
-            <span class="sr-only">Dismiss</span>
-            <svg
-              class="h-5 w-5 text-gray-900"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              aria-hidden="true"
-            >
-              <path
-                d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z"
-              />
-            </svg>
-          </button>
         </div>
       </div>
       <!-- End -->
@@ -969,10 +961,10 @@
       </div>
       <div class="header-parent">
         <div
-          class="sticky-header z-20 pr-6 py-4 bg-white w-full transition-all duration-300 ease-linear"
+          class="sticky-header z-20 pt-4 bg-white w-full transition-all duration-300 ease-linear"
         >
           <div
-            class="container mx-auto flex items-center transition-all duration-300 ease-in-out justify-between"
+            class="container mx-auto pr-6 flex items-center transition-all duration-300 ease-in-out justify-between"
           >
             <div class="flex items-center">
               <a
@@ -1101,6 +1093,81 @@
               </div>
             </div>
           </div>
+          <!-- Announcement bar desktop -->
+          <div
+            class="relative isolate mt-2 hidden items-center gap-x-6 overflow-hidden bg-gray-50 px-6 py-2.5 sm:px-3.5"
+            id="announcement-bar-mobile"
+          >
+            <div
+              class="absolute left-[max(-7rem,calc(50%-52rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl"
+              aria-hidden="true"
+            >
+              <div
+                class="aspect-[577/310] w-[36.0625rem] bg-gradient-to-r from-[#ff80b5] to-orange-600 opacity-30"
+                style="
+                  clip-path: polygon(
+                    74.8% 41.9%,
+                    97.2% 73.2%,
+                    100% 34.9%,
+                    92.5% 0.4%,
+                    87.5% 0%,
+                    75% 28.6%,
+                    58.5% 54.6%,
+                    50.1% 56.8%,
+                    46.9% 44%,
+                    48.3% 17.4%,
+                    24.7% 53.9%,
+                    0% 27.9%,
+                    11.9% 74.2%,
+                    24.9% 54.1%,
+                    68.6% 100%,
+                    74.8% 41.9%
+                  );
+                "
+              ></div>
+            </div>
+            <div
+              class="absolute left-[max(45rem,calc(50%+8rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl"
+              aria-hidden="true"
+            >
+              <div
+                class="aspect-[577/310] w-[36.0625rem] bg-gradient-to-r from-[#ff80b5] to-orange-600 opacity-30"
+                style="
+                  clip-path: polygon(
+                    74.8% 41.9%,
+                    97.2% 73.2%,
+                    100% 34.9%,
+                    92.5% 0.4%,
+                    87.5% 0%,
+                    75% 28.6%,
+                    58.5% 54.6%,
+                    50.1% 56.8%,
+                    46.9% 44%,
+                    48.3% 17.4%,
+                    24.7% 53.9%,
+                    0% 27.9%,
+                    11.9% 74.2%,
+                    24.9% 54.1%,
+                    68.6% 100%,
+                    74.8% 41.9%
+                  );
+                "
+              ></div>
+            </div>
+            <div class="mx-auto flex items-center gap-x-4 gap-y-1 md:gap-y-2">
+              <p class="text-[10px] md:text-sm text-gray-900">
+                <strong class="font-semibold">Mother's Day</strong>
+                <span class="mx-1">&bull;</span> special 20% discount on all
+                mobile screen repairs this Mother's Day!
+              </p>
+              <a
+                href="./services/index.html"
+                class="flex-none rounded-full bg-gray-900 px-3.5 py-1 text-[10px] md:text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
+                >Avail now <span aria-hidden="true">&rarr;</span></a
+              >
+            </div>
+          </div>
+          <!-- End -->
         </div>
       </div>
     </div>
@@ -1190,7 +1257,7 @@
                   data-effect="fadeInRight"
                 >
                   <img
-                    src="./assets/images/5.png"
+                    src="./assets/images/ipad-vector.png"
                     alt="tablet repairing verctor"
                     class="w-full h-full object-contain"
                   />
@@ -1467,24 +1534,24 @@
           >
             <div class="flip-card w-full h-[400px]">
               <div
-                class="flip-card-inner w-full h-full rounded-3xl ring-2 ring-orange-500"
+                class="flip-card-inner w-full h-full rounded-3xl shadow-xl"
               >
-                <div class="flip-card-front group overflow-hidden rounded-3xl">
+                <div class="flip-card-front group overflow-hidden rounded-3xl bg-orange-200">
                   <img
-                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out"
-                    src="./assets/images/bgs/iphone.png"
+                    class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700 ease-in-out"
+                    src="./assets/images/sm4.png"
                     alt="Avatar"
                   />
                   <div
-                    class="absolute flex justify-center items-center text-center text-gray-800 inset-0 bg-gray-800/20"
+                    class="absolute flex justify-center items-center text-center text-gray-700 inset-0"
                   >
                     <h2
-                      class="text-2xl md:text-3xl group-hover:scale-110 transition-transform duration-700 ease-in-out font-bold"
+                      class="self-end text-xl md:text-2xl pb-4 px-2 group-hover:scale-110 transition-transform duration-700 ease-in-out font-bold"
                     >
                       Smart Phone Repair
                     </h2>
                     <button
-                      class="absolute flex lg:hidden justify-center items-center w-10 h-10 group-hover:scale-110 group-hover:-translate-y-2 transition-transform duration-700 ease-in-out bg-gray-500 shadow-sm rounded-full z-10 bottom-3 right-3"
+                      class="absolute flex lg:hidden justify-center items-center w-10 h-10 group-hover:scale-110 group-hover:-translate-y-2 transition-transform duration-700 ease-in-out bg-gray-200 opacity-60 shadow-sm rounded-full z-10 bottom-3 right-3"
                       onclick="flipCard(0)"
                     >
                       <i class="fa fa-eye text-2xl" aria-hidden="true"></i>
@@ -1492,7 +1559,7 @@
                   </div>
                 </div>
                 <div
-                  class="flip-card-back text-white overflow-hidden rounded-3xl bg-cover"
+                  class="flip-card-back text-gray-700 overflow-hidden rounded-3xl bg-cover"
                   style="background-image: url(./assets/images/orange-bg.svg)"
                 >
                   <div class="absolute w-28 h-48 right-3 bottom-2">
@@ -1540,24 +1607,24 @@
 
             <div class="flip-card w-full h-[400px]">
               <div
-                class="flip-card-inner w-full h-full rounded-3xl ring-2 ring-orange-500"
+                class="flip-card-inner w-full h-full rounded-3xl shadow-xl"
               >
-                <div class="flip-card-front group overflow-hidden rounded-3xl">
+                <div class="flip-card-front group overflow-hidden rounded-3xl bg-orange-200">
                   <img
-                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out"
-                    src="./assets/images/bgs/macbook.png"
+                    class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700 ease-in-out"
+                    src="./assets/images/sm3.png"
                     alt="Avatar"
                   />
                   <div
-                    class="absolute flex justify-center items-center text-center text-gray-800 inset-0 bg-gray-800/20"
+                    class="absolute flex justify-center items-center text-center text-gray-700 inset-0"
                   >
                     <h2
-                      class="text-2xl md:text-3xl group-hover:scale-110 transition-transform duration-700 ease-in-out font-bold"
+                      class="self-end text-xl md:text-2xl pb-4 px-2 group-hover:scale-110 transition-transform duration-700 ease-in-out font-bold"
                     >
                       Laptops Repair
                     </h2>
                     <button
-                      class="absolute flex lg:hidden justify-center items-center w-10 h-10 group-hover:scale-110 group-hover:-translate-y-2 transition-transform duration-700 ease-in-out bg-gray-500 shadow-sm rounded-full z-10 bottom-3 right-3"
+                      class="absolute flex lg:hidden justify-center items-center w-10 h-10 group-hover:scale-110 group-hover:-translate-y-2 transition-transform duration-700 ease-in-out bg-gray-200 opacity-60 shadow-sm rounded-full z-10 bottom-3 right-3"
                       onclick="flipCard(1)"
                     >
                       <i class="fa fa-eye text-2xl" aria-hidden="true"></i>
@@ -1565,7 +1632,7 @@
                   </div>
                 </div>
                 <div
-                  class="flip-card-back bg-gray-500 text-white overflow-hidden bg-cover rounded-3xl"
+                  class="flip-card-back bg-gray-500 text-gray-700 overflow-hidden bg-cover rounded-3xl"
                   style="background-image: url(./assets/images/orange-bg.svg)"
                 >
                   <div class="absolute w-28 h-48 right-3 bottom-2">
@@ -1613,24 +1680,24 @@
             </div>
             <div class="flip-card w-full h-[400px]">
               <div
-                class="flip-card-inner w-full h-full rounded-3xl ring-2 ring-orange-500"
+                class="flip-card-inner w-full h-full rounded-3xl shadow-xl"
               >
-                <div class="flip-card-front group overflow-hidden rounded-3xl">
+                <div class="flip-card-front group overflow-hidden rounded-3xl bg-orange-200">
                   <img
-                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out"
-                    src="./assets/images/bgs/apple-watch.png"
+                    class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700 ease-in-out"
+                    src="./assets/images/sm7.png"
                     alt="Avatar"
                   />
                   <div
-                    class="absolute flex justify-center items-center text-center text-gray-800 inset-0 bg-gray-800/20"
+                    class="absolute flex justify-center items-center text-center text-gray-700 inset-0"
                   >
                     <h2
-                      class="text-2xl md:text-3xl group-hover:scale-110 transition-transform duration-700 ease-in-out font-bold"
+                      class="self-end text-xl md:text-2xl pb-4 px-2 group-hover:scale-110 transition-transform duration-700 ease-in-out font-bold"
                     >
                       Smart Watches Repair
                     </h2>
                     <button
-                      class="absolute flex lg:hidden justify-center items-center w-10 h-10 group-hover:scale-110 group-hover:-translate-y-2 transition-transform duration-700 ease-in-out bg-gray-500 shadow-sm rounded-full z-10 bottom-3 right-3"
+                      class="absolute flex lg:hidden justify-center items-center w-10 h-10 group-hover:scale-110 group-hover:-translate-y-2 transition-transform duration-700 ease-in-out bg-gray-200 opacity-60 shadow-sm rounded-full z-10 bottom-3 right-3"
                       onclick="flipCard(2)"
                     >
                       <i class="fa fa-eye text-2xl" aria-hidden="true"></i>
@@ -1638,7 +1705,7 @@
                   </div>
                 </div>
                 <div
-                  class="flip-card-back bg-gray-500 text-white overflow-hidden bg-cover rounded-3xl"
+                  class="flip-card-back bg-gray-500 text-gray-700 overflow-hidden bg-cover rounded-3xl"
                   style="background-image: url(./assets/images/orange-bg.svg)"
                 >
                   <div class="absolute w-28 h-48 right-3 bottom-2">
@@ -1686,24 +1753,24 @@
             </div>
             <div class="flip-card w-full h-[400px]">
               <div
-                class="flip-card-inner w-full h-full rounded-3xl ring-2 ring-orange-500"
+                class="flip-card-inner w-full h-full rounded-3xl shadow-xl"
               >
-                <div class="flip-card-front group overflow-hidden rounded-3xl">
+                <div class="flip-card-front group overflow-hidden rounded-3xl bg-orange-200">
                   <img
-                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out"
-                    src="./assets/images/bgs/printer.png"
+                    class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700 ease-in-out"
+                    src="./assets/images/sm2.png"
                     alt="Avatar"
                   />
                   <div
-                    class="absolute flex justify-center items-center text-center text-gray-800 inset-0 bg-gray-800/20"
+                    class="absolute flex justify-center items-center text-center text-gray-700 inset-0"
                   >
                     <h2
-                      class="text-2xl md:text-3xl group-hover:scale-110 transition-transform duration-700 ease-in-out font-bold"
+                      class="self-end text-xl md:text-2xl pb-4 px-2 group-hover:scale-110 transition-transform duration-700 ease-in-out font-bold"
                     >
                       Printers Repair
                     </h2>
                     <button
-                      class="absolute flex lg:hidden justify-center items-center w-10 h-10 group-hover:scale-110 group-hover:-translate-y-2 transition-transform duration-700 ease-in-out bg-gray-500 shadow-sm rounded-full z-10 bottom-3 right-3"
+                      class="absolute flex lg:hidden justify-center items-center w-10 h-10 group-hover:scale-110 group-hover:-translate-y-2 transition-transform duration-700 ease-in-out bg-gray-200 opacity-60 shadow-sm rounded-full z-10 bottom-3 right-3"
                       onclick="flipCard(3)"
                     >
                       <i class="fa fa-eye text-2xl" aria-hidden="true"></i>
@@ -1711,7 +1778,7 @@
                   </div>
                 </div>
                 <div
-                  class="flip-card-back bg-gray-500 text-white overflow-hidden bg-cover rounded-3xl"
+                  class="flip-card-back bg-gray-500 text-gray-700 overflow-hidden bg-cover rounded-3xl"
                   style="background-image: url(./assets/images/orange-bg.svg)"
                 >
                   <div class="absolute w-48 h-48 right-0 bottom-2">
@@ -1759,24 +1826,24 @@
             </div>
             <div class="flip-card w-full h-[400px]">
               <div
-                class="flip-card-inner w-full h-full rounded-3xl ring-2 ring-orange-500"
+                class="flip-card-inner w-full h-full rounded-3xl shadow-xl"
               >
-                <div class="flip-card-front group overflow-hidden rounded-3xl">
+                <div class="flip-card-front group overflow-hidden rounded-3xl bg-orange-200">
                   <img
-                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out"
-                    src="./assets/images/bgs/playstation.png"
+                    class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700 ease-in-out"
+                    src="./assets/images/sm5.png"
                     alt="Avatar"
                   />
                   <div
-                    class="absolute flex justify-center items-center text-center text-gray-800 inset-0 bg-gray-800/20"
+                    class="absolute flex justify-center items-center text-center text-gray-700 inset-0"
                   >
                     <h2
-                      class="text-2xl md:text-3xl group-hover:scale-110 transition-transform duration-700 ease-in-out font-bold"
+                      class="self-end text-xl md:text-2xl pb-4 px-2 group-hover:scale-110 transition-transform duration-700 ease-in-out font-bold"
                     >
                       Gaming Consoles Repair
                     </h2>
                     <button
-                      class="absolute flex lg:hidden justify-center items-center w-10 h-10 group-hover:scale-110 group-hover:-translate-y-2 transition-transform duration-700 ease-in-out bg-gray-500 shadow-sm rounded-full z-10 bottom-3 right-3"
+                      class="absolute flex lg:hidden justify-center items-center w-10 h-10 group-hover:scale-110 group-hover:-translate-y-2 transition-transform duration-700 ease-in-out bg-gray-200 opacity-60 shadow-sm rounded-full z-10 bottom-3 right-3"
                       onclick="flipCard(4)"
                     >
                       <i class="fa fa-eye text-2xl" aria-hidden="true"></i>
@@ -1784,7 +1851,7 @@
                   </div>
                 </div>
                 <div
-                  class="flip-card-back bg-gray-500 text-white overflow-hidden bg-cover rounded-3xl"
+                  class="flip-card-back bg-gray-500 text-gray-700 overflow-hidden bg-cover rounded-3xl"
                   style="background-image: url(./assets/images/orange-bg.svg)"
                 >
                   <div class="absolute w-40 h-48 right-3 bottom-2">
@@ -1831,24 +1898,24 @@
             </div>
             <div class="flip-card w-full h-[400px]">
               <div
-                class="flip-card-inner w-full h-full rounded-3xl ring-2 ring-orange-500"
+                class="flip-card-inner w-full h-full rounded-3xl shadow-xl"
               >
-                <div class="flip-card-front group overflow-hidden rounded-3xl">
+                <div class="flip-card-front group overflow-hidden rounded-3xl bg-orange-200">
                   <img
-                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out"
-                    src="./assets/images/bgs/ipad.png"
+                    class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700 ease-in-out"
+                    src="./assets/images/sm1.png"
                     alt="Avatar"
                   />
                   <div
-                    class="absolute flex justify-center items-center text-center text-gray-800 inset-0 bg-gray-800/20"
+                    class="absolute flex justify-center items-center text-center text-gray-700 inset-0"
                   >
                     <h2
-                      class="text-2xl md:text-3xl group-hover:scale-110 transition-transform duration-700 ease-in-out font-bold"
+                      class="self-end text-xl md:text-2xl pb-4 px-2 group-hover:scale-110 transition-transform duration-700 ease-in-out font-bold"
                     >
                       Tablets Repair
                     </h2>
                     <button
-                      class="absolute flex lg:hidden justify-center items-center w-10 h-10 group-hover:scale-110 group-hover:-translate-y-2 transition-transform duration-700 ease-in-out bg-gray-500 shadow-sm rounded-full z-10 bottom-3 right-3"
+                      class="absolute flex lg:hidden justify-center items-center w-10 h-10 group-hover:scale-110 group-hover:-translate-y-2 transition-transform duration-700 ease-in-out bg-gray-200 opacity-60 shadow-sm rounded-full z-10 bottom-3 right-3"
                       onclick="flipCard(5)"
                     >
                       <i class="fa fa-eye text-2xl" aria-hidden="true"></i>
@@ -1856,7 +1923,7 @@
                   </div>
                 </div>
                 <div
-                  class="flip-card-back bg-gray-500 text-white overflow-hidden bg-cover rounded-3xl"
+                  class="flip-card-back bg-gray-500 text-gray-700 overflow-hidden bg-cover rounded-3xl"
                   style="background-image: url(./assets/images/orange-bg.svg)"
                 >
                   <div class="absolute w-28 h-40 right-3 bottom-2">
@@ -1904,24 +1971,24 @@
             </div>
             <div class="flip-card w-full h-[400px]">
               <div
-                class="flip-card-inner w-full h-full rounded-3xl ring-2 ring-orange-500"
+                class="flip-card-inner w-full h-full rounded-3xl shadow-xl"
               >
-                <div class="flip-card-front group overflow-hidden rounded-3xl">
+                <div class="flip-card-front group overflow-hidden rounded-3xl bg-orange-200">
                   <img
-                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out"
-                    src="./assets/images/bgs/camera.png"
+                    class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700 ease-in-out"
+                    src="./assets/images/sm6.png"
                     alt="Avatar"
                   />
                   <div
-                    class="absolute flex justify-center items-center text-center text-gray-800 inset-0 bg-gray-800/20"
+                    class="absolute flex justify-center items-center text-center text-gray-700 inset-0"
                   >
                     <h2
-                      class="text-2xl md:text-3xl group-hover:scale-110 transition-transform duration-700 ease-in-out font-bold"
+                      class="self-end text-xl md:text-2xl pb-4 px-2 group-hover:scale-110 transition-transform duration-700 ease-in-out font-bold"
                     >
                       Cameras Repair
                     </h2>
                     <button
-                      class="absolute flex lg:hidden justify-center items-center w-10 h-10 group-hover:scale-110 group-hover:-translate-y-2 transition-transform duration-700 ease-in-out bg-gray-500 shadow-sm rounded-full z-10 bottom-3 right-3"
+                      class="absolute flex lg:hidden justify-center items-center w-10 h-10 group-hover:scale-110 group-hover:-translate-y-2 transition-transform duration-700 ease-in-out bg-gray-200 opacity-60 shadow-sm rounded-full z-10 bottom-3 right-3"
                       onclick="flipCard(6)"
                     >
                       <i class="fa fa-eye text-2xl" aria-hidden="true"></i>
@@ -1929,7 +1996,7 @@
                   </div>
                 </div>
                 <div
-                  class="flip-card-back bg-gray-500 text-white overflow-hidden bg-cover rounded-3xl"
+                  class="flip-card-back bg-gray-500 text-gray-700 overflow-hidden bg-cover rounded-3xl"
                   style="background-image: url(./assets/images/orange-bg.svg)"
                 >
                   <div class="absolute w-32 h-48 right-3 bottom-2">
