@@ -98,6 +98,14 @@ $(document).ready(function () {
   $(".counter").counterUp({ time: 2000 });
 });
 
+
+const preLoader = () => {
+  const element = document.getElementById("preloader")
+  element.classList.add("pinter-events-auto", "opacity-0")
+}
+
+window.addEventListener("load", preLoader)
+
 // const openSmMenu = () => {
 //   document.getElementById("menu").classList.remove("-translate-x-full");
 //   document.getElementById("menu").classList.add("translate-x-0");
@@ -223,7 +231,7 @@ const closeInquiryForm = () => {
 
 // Close Inquery from on click outside
 inquiryHoverly.addEventListener("click", (event) => {
-  const clickedDeleteIcon = [...event.target.classList].includes('delete-icon')
+  const clickedDeleteIcon = [...event.target.classList].includes("delete-icon");
   if (!inquiryForm.contains(event.target) && !clickedDeleteIcon) {
     closeInquiryForm();
   }
@@ -269,7 +277,7 @@ document.onscroll = () => {
   let activeLink = document.querySelector(".menu-link.active");
   let headerParent = document.querySelector(".header-parent");
   let body = document.querySelector("body");
-  let announcementBar = document.getElementById('announcement-bar-mobile')
+  let announcementBar = document.getElementById("announcement-bar-mobile");
   if (window.scrollY > headerParent.offsetTop) {
     header.classList.remove("pt-4", "bg-white");
     header.classList.add(
@@ -285,7 +293,7 @@ document.onscroll = () => {
     });
     body.style.paddingTop = header.offsetHeight + "px";
     logo.src = "./assets/images/logo_light.png";
-    announcementBar.style.display = 'flex';
+    announcementBar.style.display = "flex";
   } else {
     header.classList.add("pt-4", "bg-white");
     header.classList.remove(
@@ -302,7 +310,7 @@ document.onscroll = () => {
     activeLink?.style?.setProperty("--priamry", "#f97316");
     body.style.paddingTop = 0;
     logo.src = "./assets/images/logo.webp";
-    announcementBar.style.display = 'none';
+    announcementBar.style.display = "none";
   }
 };
 
@@ -638,21 +646,20 @@ window.addEventListener("scroll", scrollFunction);
 // Faqs
 document.querySelectorAll(".send-button").forEach((button) => {
   button.addEventListener("click", () => {
-    
     const questionId = button.parentNode.id;
     const answerId = `a${questionId.slice(1)}`;
     const selectedAnswer = document.getElementById(answerId);
-    console.log(button)
+    console.log(button);
     if (!selectedAnswer.classList.contains("max-h-0")) {
-      button.classList.remove("text-orange-100", "bg-orange-400")
-      button.classList.add("text-orange-400", "bg-orange-100")
+      button.classList.remove("text-orange-100", "bg-orange-400");
+      button.classList.add("text-orange-400", "bg-orange-100");
       selectedAnswer.classList.toggle("scale-0");
       setTimeout(() => {
         selectedAnswer.classList.toggle("max-h-0");
       }, 200);
     } else {
-      button.classList.remove("text-orange-400", "bg-orange-100")
-      button.classList.add("text-orange-100", "bg-orange-400")
+      button.classList.remove("text-orange-400", "bg-orange-100");
+      button.classList.add("text-orange-100", "bg-orange-400");
       selectedAnswer.classList.toggle("max-h-0");
       setTimeout(() => {
         selectedAnswer.classList.toggle("scale-0");
@@ -678,20 +685,39 @@ const deleteIcon = `<button class="delete-icon ml-2" onclick="deleteIssue(this)"
 </svg></button>
 `;
 
-var issueNumber = 2
+var issueNumber = 2;
 newIssueBtn.addEventListener("click", () => {
   const newIssue = issueInput.cloneNode(true);
   newIssue.querySelector("#issue-title").innerHTML =
-  `Issue (${issueNumber}) <span class="text-red-500 ml-1">*</span> ` + deleteIcon;
+    `Issue (${issueNumber}) <span class="text-red-500 ml-1">*</span> ` +
+    deleteIcon;
   newIssue.id = "issue-input" + issueNumber;
   issueInputContainer.appendChild(newIssue);
-  issueNumber += 1
+  issueNumber += 1;
 });
 
+function deleteIssue(icon) {
+  let issue = icon.parentNode.parentNode.parentNode;
+  setTimeout(() => {
+    issue.remove();
+  }, 100);
+}
 
-function deleteIssue(icon){
-  let issue = icon.parentNode.parentNode.parentNode
-  setTimeout(()=> {
-    issue.remove()
-  }, 100)
+// Success Model
+
+let modal = document.getElementById("success-modal");
+
+function modalHandler(val) {
+  if (val) {
+    modal.classList.remove("opacity-0", "pointer-events-none");
+    modal.classList.add("opacity-100", "pointer-events-auto");
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 },
+    });
+  } else {
+    modal.classList.add("opacity-0", "pointer-events-none");
+    modal.classList.remove("opacity-100", "pointer-events-auto");
+  }
 }

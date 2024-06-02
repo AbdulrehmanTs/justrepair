@@ -64,6 +64,18 @@
     />
   </head>
   <body class="accent-orange-500">
+    <!-- preloader -->
+    <div id="preloader" class="fixed inset-0 bg-white z-[999] pointer-events-none flex justify-center items-center h-screen">
+      <div class="relative inline-flex">
+        <div class="w-8 h-8 bg-orange-500 rounded-full"></div>
+        <div
+          class="w-8 h-8 bg-orange-500 rounded-full absolute top-0 left-0 animate-ping"
+        ></div>
+        <div
+          class="w-8 h-8 bg-orange-500 rounded-full absolute top-0 left-0 animate-pulse"
+        ></div>
+      </div>
+    </div>
     <!-- md menu -->
     <div
       id="menu-hoverly"

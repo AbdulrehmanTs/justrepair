@@ -4,10 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Mobile Phone Repair in Dubai | 
-      JustRepair
-    </title>
+    <title>Mobile Phone Repair in Dubai | JustRepair</title>
     <meta
       name="description"
       content="Mobile Phone Repair Fast, reliable repair services in Dubai for mobiles, Laptops, PCs, tablets, gaming consoles, and smartwatches. Trust our expert technicians for quick fixes and exceptional quality."
@@ -64,6 +61,18 @@
     />
   </head>
   <body class="accent-orange-500">
+    <!-- preloader -->
+    <div id="preloader" class="fixed inset-0 bg-white z-[999] pointer-events-none flex justify-center items-center h-screen">
+      <div class="relative inline-flex">
+        <div class="w-8 h-8 bg-orange-500 rounded-full"></div>
+        <div
+          class="w-8 h-8 bg-orange-500 rounded-full absolute top-0 left-0 animate-ping"
+        ></div>
+        <div
+          class="w-8 h-8 bg-orange-500 rounded-full absolute top-0 left-0 animate-pulse"
+        ></div>
+      </div>
+    </div>
     <!-- md menu -->
     <div
       id="menu-hoverly"
@@ -1172,6 +1181,66 @@
       </div>
     </div>
 
+    <!-- Sucess Model -->
+    <div
+      class="py-12 bg-black/80 transition duration-150 ease-in-out z-50 fixed inset-0 opacity-0 pointer-events-none flex items-center justify-center"
+      id="success-modal"
+    >
+      <div role="alert" class="container mx-auto w-11/12 md:w-2/3 max-w-lg">
+        <div
+          class="relative py-8 px-8 md:px-16 bg-white shadow-md rounded-xl border border-gray-400"
+        >
+          <button
+            class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 rounded-md cursor-pointer absolute top-0 right-0 mt-4 mr-5 text-gray-400 hover:text-gray-600 transition duration-150 ease-in-out"
+            aria-label="Close"
+            role="button"
+            onclick="modalHandler()"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-x"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              stroke-width="2.5"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" />
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+          <div class="w-full flex justify-center text-green-400 mb-4">
+            <img src="./assets/images/green-tick.svg" alt="icon" />
+          </div>
+          <h1
+            tabindex="0"
+            class="focus:outline-none text-center text-gray-800 font-lg font-bold tracking-normal leading-tight mb-4"
+          >
+            Payment Processing Successful
+          </h1>
+          <p
+            tabindex="0"
+            class="focus:outline-none mb-5 text-sm text-gray-600 text-center font-normal"
+          >
+            Thank you for your payment. An automated payment receipt will be
+            sent to your email. Check the action below for more details.
+          </p>
+          <div class="flex items-center justify-center w-full">
+            <button
+              class="px-4 py-2 bg-gradient-to-r from-orange-600 to-red-500 rounded-full hover:scale-95 transition text-base border border-orange-500 text-white focus:outline-none focus:ring-white hover:bg-orange-500 hover:text-white hover:shadow-lg shadow-white/90 min-w-32"
+              onclick="modalHandler()"
+            >
+              Ok
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Sliders -->
     <div class="container mx-auto">
       <div class="relative mx-auto mb-10 mt-4 px-4 md:px-8">
@@ -1533,10 +1602,10 @@
             class="grid grid-cols-1 min-[540px]:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 flex-wrap gap-10"
           >
             <div class="flip-card w-full h-[350px]">
-              <div
-                class="flip-card-inner w-full h-full rounded-3xl shadow-xl"
-              >
-                <div class="flip-card-front flex flex-col justify-center group overflow-hidden rounded-3xl bg-orange-200">
+              <div class="flip-card-inner w-full h-full rounded-3xl shadow-xl">
+                <div
+                  class="flip-card-front flex flex-col justify-center group overflow-hidden rounded-3xl bg-orange-200"
+                >
                   <img
                     class="w-52 h-52 m-auto object-contain group-hover:scale-105 transition-transform duration-700 ease-in-out"
                     src="./assets/images/sm4.png"
@@ -1606,10 +1675,10 @@
             </div>
 
             <div class="flip-card w-full h-[350px]">
-              <div
-                class="flip-card-inner w-full h-full rounded-3xl shadow-xl"
-              >
-                <div class="flip-card-front flex flex-col justify-center group overflow-hidden rounded-3xl bg-orange-200">
+              <div class="flip-card-inner w-full h-full rounded-3xl shadow-xl">
+                <div
+                  class="flip-card-front flex flex-col justify-center group overflow-hidden rounded-3xl bg-orange-200"
+                >
                   <img
                     class="w-52 h-52 m-auto object-contain group-hover:scale-105 transition-transform duration-700 ease-in-out"
                     src="./assets/images/sm3.png"
@@ -1679,10 +1748,10 @@
               </div>
             </div>
             <div class="flip-card w-full h-[350px]">
-              <div
-                class="flip-card-inner w-full h-full rounded-3xl shadow-xl"
-              >
-                <div class="flip-card-front flex flex-col justify-center group overflow-hidden rounded-3xl bg-orange-200">
+              <div class="flip-card-inner w-full h-full rounded-3xl shadow-xl">
+                <div
+                  class="flip-card-front flex flex-col justify-center group overflow-hidden rounded-3xl bg-orange-200"
+                >
                   <img
                     class="w-52 h-52 m-auto object-contain group-hover:scale-105 transition-transform duration-700 ease-in-out"
                     src="./assets/images/sm7.png"
@@ -1752,10 +1821,10 @@
               </div>
             </div>
             <div class="flip-card w-full h-[350px]">
-              <div
-                class="flip-card-inner w-full h-full rounded-3xl shadow-xl"
-              >
-                <div class="flip-card-front flex flex-col justify-center group overflow-hidden rounded-3xl bg-orange-200">
+              <div class="flip-card-inner w-full h-full rounded-3xl shadow-xl">
+                <div
+                  class="flip-card-front flex flex-col justify-center group overflow-hidden rounded-3xl bg-orange-200"
+                >
                   <img
                     class="w-52 h-52 m-auto object-contain group-hover:scale-105 transition-transform duration-700 ease-in-out"
                     src="./assets/images/sm2.png"
@@ -1825,10 +1894,10 @@
               </div>
             </div>
             <div class="flip-card w-full h-[350px]">
-              <div
-                class="flip-card-inner w-full h-full rounded-3xl shadow-xl"
-              >
-                <div class="flip-card-front flex flex-col justify-center group overflow-hidden rounded-3xl bg-orange-200">
+              <div class="flip-card-inner w-full h-full rounded-3xl shadow-xl">
+                <div
+                  class="flip-card-front flex flex-col justify-center group overflow-hidden rounded-3xl bg-orange-200"
+                >
                   <img
                     class="w-52 h-52 m-auto object-contain group-hover:scale-105 transition-transform duration-700 ease-in-out"
                     src="./assets/images/sm5.png"
@@ -1897,10 +1966,10 @@
               </div>
             </div>
             <div class="flip-card w-full h-[350px]">
-              <div
-                class="flip-card-inner w-full h-full rounded-3xl shadow-xl"
-              >
-                <div class="flip-card-front flex flex-col justify-center group overflow-hidden rounded-3xl bg-orange-200">
+              <div class="flip-card-inner w-full h-full rounded-3xl shadow-xl">
+                <div
+                  class="flip-card-front flex flex-col justify-center group overflow-hidden rounded-3xl bg-orange-200"
+                >
                   <img
                     class="w-52 h-52 m-auto object-contain group-hover:scale-105 transition-transform duration-700 ease-in-out"
                     src="./assets/images/sm1.png"
@@ -1970,10 +2039,10 @@
               </div>
             </div>
             <div class="flip-card w-full h-[350px]">
-              <div
-                class="flip-card-inner w-full h-full rounded-3xl shadow-xl"
-              >
-                <div class="flip-card-front flex flex-col justify-center group overflow-hidden rounded-3xl bg-orange-200">
+              <div class="flip-card-inner w-full h-full rounded-3xl shadow-xl">
+                <div
+                  class="flip-card-front flex flex-col justify-center group overflow-hidden rounded-3xl bg-orange-200"
+                >
                   <img
                     class="w-52 h-52 m-auto object-contain group-hover:scale-105 transition-transform duration-700 ease-in-out"
                     src="./assets/images/sm6.png"
@@ -3357,7 +3426,7 @@
                     >BLOGS</a
                   >
                 </li>
-                
+
                 <li>
                   <a
                     href="./student-discount.html"
@@ -3810,6 +3879,7 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery.counterup@2.1.0/jquery.counterup.min.js"></script>
     <script type="text/javascript" src="./assets/slick/slick.min.js"></script>
     <!-- <script src="https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
     <script src="./assets/scripts/index.js"></script>
   </body>
 </html>
