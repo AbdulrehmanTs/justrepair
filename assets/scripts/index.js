@@ -98,13 +98,16 @@ $(document).ready(function () {
   $(".counter").counterUp({ time: 2000 });
 });
 
-
+// Preloader
+const body = document.getElementsByTagName("body")[0];
+const element = document.getElementById("preloader");
+body.classList.add();
 const preLoader = () => {
-  const element = document.getElementById("preloader")
-  element.classList.add("pinter-events-auto", "opacity-0")
-}
+  element.classList.add("opacity-0", "pointer-events-none");
+  body.classList.remove("overflow-hidden");
+};
 
-window.addEventListener("load", preLoader)
+window.addEventListener("load", preLoader);
 
 // const openSmMenu = () => {
 //   document.getElementById("menu").classList.remove("-translate-x-full");
