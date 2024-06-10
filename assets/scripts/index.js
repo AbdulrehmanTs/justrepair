@@ -281,6 +281,15 @@ document.onscroll = () => {
   let headerParent = document.querySelector(".header-parent");
   let body = document.querySelector("body");
   let announcementBar = document.getElementById("announcement-bar-mobile");
+  function getBasePath() {
+    const scripts = document.getElementsByTagName("script");
+    const currentScript = scripts[scripts.length - 1].src;
+    console.log(scripts[scripts.length - 1].src);
+    const basePath =
+      currentScript.substring(0, currentScript.lastIndexOf("/")) + "/";
+    return basePath;
+  }
+  const basePath = getBasePath();
   if (window.scrollY > headerParent.offsetTop) {
     header.classList.remove("pt-4", "bg-white");
     header.classList.add(
@@ -295,7 +304,8 @@ document.onscroll = () => {
       item.style.setProperty("--priamry", "white");
     });
     body.style.paddingTop = header.offsetHeight + "px";
-    logo.src = "./assets/images/logo_light.png";
+    // logo.src = "/assets/images/logo_light.png";
+    logo.src = basePath + "../images/logo_light.png";
     announcementBar.style.display = "flex";
   } else {
     header.classList.add("pt-4", "bg-white");
@@ -312,7 +322,8 @@ document.onscroll = () => {
     });
     activeLink?.style?.setProperty("--priamry", "#f97316");
     body.style.paddingTop = 0;
-    logo.src = "./assets/images/logo.webp";
+    // logo.src = "/assets/images/logo.webp";
+    logo.src = basePath + "../images/logo.webp";
     announcementBar.style.display = "none";
   }
 };
@@ -486,7 +497,7 @@ document.addEventListener("DOMContentLoaded", function () {
       trigger: ".line",
       scrub: true,
       start: "top center",
-      end: "+=1000",
+      end: "+=1300",
     },
     scaleY: 0,
     ease: "none",
@@ -581,6 +592,29 @@ document.addEventListener("DOMContentLoaded", function () {
   gsap.to(p4, {
     scrollTrigger: {
       trigger: p4,
+      start: "top center",
+      end: "bottom center",
+      scrub: true,
+    },
+    color: "white",
+    ease: "none",
+  });
+  const label5 = gsap.utils.selector('[data-label="5"]');
+  const div5 = label5("div");
+  const p5 = label5("p");
+  gsap.to(div5, {
+    scrollTrigger: {
+      trigger: div5,
+      start: "top center",
+      end: "bottom center",
+      scrub: true,
+    },
+    backgroundColor: "#f97316",
+    ease: "none",
+  });
+  gsap.to(p5, {
+    scrollTrigger: {
+      trigger: p5,
       start: "top center",
       end: "bottom center",
       scrub: true,
