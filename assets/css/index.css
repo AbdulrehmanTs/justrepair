@@ -223,6 +223,15 @@ background: #FED7AA;
 background: radial-gradient(at center, #FED7AA, #F97416);
 }
 
+.dotted-arrow {
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  right: -18rem;
+  transform: rotate(55deg);
+  opacity: .2;
+}
+
 
 /* Key Frames */
 
