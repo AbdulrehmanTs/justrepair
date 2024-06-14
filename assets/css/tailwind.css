@@ -3994,11 +3994,6 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.rotate-\[55deg\] {
-  --tw-rotate: 55deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .skew-x-3 {
   --tw-skew-x: 3deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -8109,6 +8104,15 @@ select {
 .radial-gradient {
   background: #FED7AA;
   background: radial-gradient(at center, #FED7AA, #F97416);
+}
+
+.dotted-arrow {
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  right: -18rem;
+  transform: rotate(55deg);
+  opacity: .2;
 }
 
 /* Key Frames */
