@@ -62,7 +62,7 @@
   </head>
   <body class="accent-orange-500 overflow-hidden">
     <!-- preloader -->
-    <div id="preloader" class="fixed inset-0 bg-black/90 z-[999] flex justify-center items-center h-screen">
+    <!-- <div id="preloader" class="fixed inset-0 bg-black/90 z-[999] flex justify-center items-center h-screen">
       <div class="relative inline-flex">
         <div class="w-8 h-8 bg-orange-500 rounded-full"></div>
         <div
@@ -72,7 +72,7 @@
           class="w-8 h-8 bg-orange-500 rounded-full absolute top-0 left-0 animate-pulse"
         ></div>
       </div>
-    </div>
+    </div> -->
     <!-- md menu -->
     <div
       id="menu-hoverly"
@@ -485,6 +485,7 @@
                         class="w-full py-4 outline-none bg-transparent"
                         name="device-type"
                         id="device-type"
+                        aria-label="device-type"
                       >
                         <option value="mobile">mobile</option>
                         <option value="laptop/pc">laptop/pc</option>
@@ -510,6 +511,7 @@
                         class="w-full py-4 outline-none bg-transparent"
                         name="device-type"
                         id="device-type"
+                        aria-label="device-type"
                       >
                         <option value="apple">Apple</option>
                         <option value="samsung">Samsung</option>
@@ -538,7 +540,8 @@
                         <select
                           class="w-full py-4 outline-none bg-transparent"
                           name="device-type"
-                          id="device-type"
+                          id="select-issue"
+                          aria-label="select-issue"
                         >
                           <option value="Screen Repair">Screen Repair</option>
                           <option value="Battery Replacement">
@@ -1252,7 +1255,7 @@
     <div class="container mx-auto">
       <div class="relative mx-auto mb-10 mt-4 px-4 md:px-8">
         <div
-          class="fade relative rounded-[40px] bg-black shadow-2xl shadow-black/60 lg:px-10 bg-no-repeat bg-cover"
+          class="fade relative rounded-[40px] size-full bg-black shadow-2xl shadow-black/60 lg:px-10 bg-no-repeat bg-cover"
           style="background-image: url(./assets/images/bg-tech.webp)"
         >
           <div>
@@ -1633,6 +1636,7 @@
                     <button
                       class="absolute flex lg:hidden justify-center items-center w-10 h-10 group-hover:scale-110 group-hover:-translate-y-2 transition-transform duration-700 ease-in-out bg-gray-200 opacity-60 shadow-sm rounded-full z-10 bottom-3 right-3"
                       onclick="flipCard(0)"
+                      aria-label="eye"
                     >
                       <i class="fa fa-eye text-2xl" aria-hidden="true"></i>
                     </button>
@@ -1674,6 +1678,8 @@
                       <button
                         class="flex lg:hidden justify-center items-center w-10 h-10 hover:scale-110 hover:-translate-y-2 transition-transform duration-700 ease-in-out bg-gray-200 text-gray-500 shadow-sm rounded-full z-10 bottom-3 right-3"
                         onclick="flipCardBack(0)"
+                         aria-label="eye"
+                        aria-label="eye"
                       >
                         <i
                           class="fa fa-chevron-right text-2xl"
@@ -1708,6 +1714,7 @@
                     <button
                       class="absolute flex lg:hidden justify-center items-center w-10 h-10 group-hover:scale-110 group-hover:-translate-y-2 transition-transform duration-700 ease-in-out bg-gray-200 opacity-60 shadow-sm rounded-full z-10 bottom-3 right-3"
                       onclick="flipCard(1)"
+                      aria-label="eye"
                     >
                       <i class="fa fa-eye text-2xl" aria-hidden="true"></i>
                     </button>
@@ -1750,6 +1757,7 @@
                       <button
                         class="flex lg:hidden justify-center items-center w-10 h-10 hover:scale-110 hover:-translate-y-2 transition-transform duration-700 ease-in-out bg-gray-200 text-gray-500 shadow-sm rounded-full z-10 bottom-3 right-3"
                         onclick="flipCardBack(1)"
+                         aria-label="eye"
                       >
                         <i
                           class="fa fa-chevron-right text-2xl"
@@ -1783,6 +1791,7 @@
                     <button
                       class="absolute flex lg:hidden justify-center items-center w-10 h-10 group-hover:scale-110 group-hover:-translate-y-2 transition-transform duration-700 ease-in-out bg-gray-200 opacity-60 shadow-sm rounded-full z-10 bottom-3 right-3"
                       onclick="flipCard(2)"
+                       aria-label="eye"
                     >
                       <i class="fa fa-eye text-2xl" aria-hidden="true"></i>
                     </button>
@@ -1825,6 +1834,7 @@
                       <button
                         class="flex lg:hidden justify-center items-center w-10 h-10 hover:scale-110 hover:-translate-y-2 transition-transform duration-700 ease-in-out bg-gray-200 text-gray-500 shadow-sm rounded-full z-10 bottom-3 right-3"
                         onclick="flipCardBack(2)"
+                         aria-label="eye"
                       >
                         <i
                           class="fa fa-chevron-right text-2xl"
@@ -1858,6 +1868,7 @@
                     <button
                       class="absolute flex lg:hidden justify-center items-center w-10 h-10 group-hover:scale-110 group-hover:-translate-y-2 transition-transform duration-700 ease-in-out bg-gray-200 opacity-60 shadow-sm rounded-full z-10 bottom-3 right-3"
                       onclick="flipCard(3)"
+                       aria-label="eye"
                     >
                       <i class="fa fa-eye text-2xl" aria-hidden="true"></i>
                     </button>
@@ -1900,6 +1911,7 @@
                       <button
                         class="flex lg:hidden justify-center items-center w-10 h-10 hover:scale-110 hover:-translate-y-2 transition-transform duration-700 ease-in-out bg-gray-200 text-gray-500 shadow-sm rounded-full z-10 bottom-3 right-3"
                         onclick="flipCardBack(3)"
+                         aria-label="eye"
                       >
                         <i
                           class="fa fa-chevron-right text-2xl"
@@ -1933,6 +1945,7 @@
                     <button
                       class="absolute flex lg:hidden justify-center items-center w-10 h-10 group-hover:scale-110 group-hover:-translate-y-2 transition-transform duration-700 ease-in-out bg-gray-200 opacity-60 shadow-sm rounded-full z-10 bottom-3 right-3"
                       onclick="flipCard(4)"
+                       aria-label="eye"
                     >
                       <i class="fa fa-eye text-2xl" aria-hidden="true"></i>
                     </button>
@@ -1974,6 +1987,7 @@
                       <button
                         class="flex lg:hidden justify-center items-center w-10 h-10 hover:scale-110 hover:-translate-y-2 transition-transform duration-700 ease-in-out bg-gray-200 text-gray-500 shadow-sm rounded-full z-10 bottom-3 right-3"
                         onclick="flipCardBack(4)"
+                         aria-label="eye"
                       >
                         <i
                           class="fa fa-chevron-right text-2xl"
@@ -2007,6 +2021,7 @@
                     <button
                       class="absolute flex lg:hidden justify-center items-center w-10 h-10 group-hover:scale-110 group-hover:-translate-y-2 transition-transform duration-700 ease-in-out bg-gray-200 opacity-60 shadow-sm rounded-full z-10 bottom-3 right-3"
                       onclick="flipCard(5)"
+                       aria-label="eye"
                     >
                       <i class="fa fa-eye text-2xl" aria-hidden="true"></i>
                     </button>
@@ -2049,6 +2064,7 @@
                       <button
                         class="flex lg:hidden justify-center items-center w-10 h-10 hover:scale-110 hover:-translate-y-2 transition-transform duration-700 ease-in-out bg-gray-200 text-gray-500 shadow-sm rounded-full z-10 bottom-3 right-3"
                         onclick="flipCardBack(5)"
+                         aria-label="eye"
                       >
                         <i
                           class="fa fa-chevron-right text-2xl"
@@ -2082,6 +2098,7 @@
                     <button
                       class="absolute flex lg:hidden justify-center items-center w-10 h-10 group-hover:scale-110 group-hover:-translate-y-2 transition-transform duration-700 ease-in-out bg-gray-200 opacity-60 shadow-sm rounded-full z-10 bottom-3 right-3"
                       onclick="flipCard(6)"
+                       aria-label="eye"
                     >
                       <i class="fa fa-eye text-2xl" aria-hidden="true"></i>
                     </button>
@@ -2124,6 +2141,7 @@
                       <button
                         class="flex lg:hidden justify-center items-center w-10 h-10 hover:scale-110 hover:-translate-y-2 transition-transform duration-700 ease-in-out bg-gray-200 text-gray-500 shadow-sm rounded-full z-10 bottom-3 right-3"
                         onclick="flipCardBack(6)"
+                         aria-label="eye"
                       >
                         <i
                           class="fa fa-chevron-right text-2xl"
@@ -2881,7 +2899,7 @@
                 <p class="text-white">E</p>
               </div>
               <div>
-                <h6 class="text-lg font-medium text-gray-700">Eric Ampire</h6>
+                <h3 class="text-lg font-medium text-gray-700">Eric Ampire</h3>
                 <div class="mt-1 flex">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -2972,9 +2990,9 @@
                 <p class="text-white">R</p>
               </div>
               <div>
-                <h6 class="text-lg font-medium text-gray-700">
+                <h3 class="text-lg font-medium text-gray-700">
                   Rodrigo Aguilar
-                </h6>
+                </h3>
                 <div class="mt-1 flex">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -3062,7 +3080,7 @@
                 <p class="text-white">A</p>
               </div>
               <div>
-                <h6 class="text-lg font-medium text-gray-700">Adam Wathan</h6>
+                <h3 class="text-lg font-medium text-gray-700">Adam Wathan</h3>
                 <div class="mt-1 flex">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -3151,7 +3169,7 @@
                 <p class="text-white">D</p>
               </div>
               <div>
-                <h6 class="text-lg font-medium text-gray-700">Dan Kyungu</h6>
+                <h3 class="text-lg font-medium text-gray-700">Dan Kyungu</h3>
                 <div class="mt-1 flex">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -3240,7 +3258,7 @@
                 <p class="text-white">J</p>
               </div>
               <div>
-                <h6 class="text-lg font-medium text-gray-700">John Doe</h6>
+                <h3 class="text-lg font-medium text-gray-700">John Doe</h3>
                 <div class="mt-1 flex">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -3329,7 +3347,7 @@
                 <p class="text-white">R</p>
               </div>
               <div>
-                <h6 class="text-lg font-medium text-gray-700">Randy Doe</h6>
+                <h3 class="text-lg font-medium text-gray-700">Randy Doe</h3>
                 <div class="mt-1 flex">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -3985,10 +4003,10 @@
       type="text/javascript"
       src="https://code.jquery.com/jquery-1.11.0.min.js"
     ></script>
-    <script
+    <!-- <script
       type="text/javascript"
       src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
-    ></script>
+    ></script> -->
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/jquery.counterup@2.1.0/jquery.counterup.min.js"></script>
     <script type="text/javascript" src="./assets/slick/slick.min.js"></script>
