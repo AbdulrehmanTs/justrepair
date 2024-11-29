@@ -101,12 +101,15 @@ $(document).ready(function () {
 // Preloader
 const body = document.getElementsByTagName("body")[0];
 const element = document.getElementById("preloader");
-// const preLoader = () => {
-//   element.classList.add("opacity-0", "pointer-events-none");
-//   body.classList.remove("overflow-hidden");
-// };
+body.classList.add('overflow-hidden');
+const preLoader = () => {
+  if (element) {
+    element.classList.add("opacity-0", "pointer-events-none");
+    body.classList.remove("overflow-hidden");
+  }
+};
 
-// window.addEventListener("load", preLoader);
+window.addEventListener("load", preLoader);
 
 // const openSmMenu = () => {
 //   document.getElementById("menu").classList.remove("-translate-x-full");
@@ -303,8 +306,7 @@ document.onscroll = () => {
       item.style.setProperty("--priamry", "white");
     });
     body.style.paddingTop = header.offsetHeight + "px";
-    logo.style.display = "none",
-    logoLight.style.display = "block"
+    (logo.style.display = "none"), (logoLight.style.display = "block");
     announcementBar.style.display = "flex";
   } else {
     header.classList.add("pt-4", "bg-white");
@@ -321,8 +323,7 @@ document.onscroll = () => {
     });
     activeLink?.style?.setProperty("--priamry", "#f97316");
     body.style.paddingTop = 0;
-    logo.style.display = "block",
-    logoLight.style.display = "none"
+    (logo.style.display = "block"), (logoLight.style.display = "none");
     announcementBar.style.display = "none";
   }
 };
