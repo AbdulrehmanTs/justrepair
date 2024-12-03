@@ -9,8 +9,18 @@
       name="description"
       content="Mobile Phone Repair Fast, reliable repair services in Dubai for mobiles, Laptops, PCs, tablets, gaming consoles, and smartwatches. Trust our expert technicians for quick fixes and exceptional quality."
     />
-    <link rel="stylesheet" href="../assets/css/index.css" />
-    <link rel="stylesheet" href="../assets/css/tailwind.css" />
+    <link
+      rel="preload"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="../assets/css/index.css"
+    />
+    <link
+      rel="preload"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="../assets/css/tailwind.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,7 +29,13 @@
       as="style"
       onload="this.rel='stylesheet'"
     />
-    <link rel="stylesheet" type="text/css" href="../assets/slick/slick.css" />
+    <link
+      rel="preload"
+      as="style"
+      onload="this.rel='stylesheet'"
+      type="text/css"
+      href="../assets/slick/slick.css"
+    />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -55,7 +71,9 @@
       onload="this.rel='stylesheet'"
     />
     <link
-      rel="stylesheet"
+      rel="preload"
+      as="style"
+      onload="this.rel='stylesheet'"
       type="text/css"
       href="../assets/slick/slick-theme.css"
     />
@@ -1255,9 +1273,9 @@
     <!-- Sliders -->
     <div class="container mx-auto">
       <div class="relative mx-auto mb-10 mt-4 px-4 md:px-8">
-        <!-- style="background-image: url(../assets/images/bg-tech.webp)" -->
         <div
-          class="fade relative rounded-[40px] size-full bg-black shadow-2xl shadow-black/60 lg:px-10 bg-no-repeat bg-cover"
+        class="fade relative rounded-[40px] size-full bg-black shadow-2xl shadow-black/60 lg:px-10 bg-no-repeat bg-cover"
+        style="background-image: url(../assets/images/bg-tech.webp)"
         >
           <div>
             <div
@@ -1360,6 +1378,7 @@
                     rel="preload"
                     width="1000"
                     height="1000"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -1402,6 +1421,7 @@
                     src="../assets/images/4.webp"
                     alt="laptop repairing verctor"
                     class="w-full h-full object-contain"
+                    loading="lazy"
                   />
                 </div>
               </div>
