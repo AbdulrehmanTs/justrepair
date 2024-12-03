@@ -427,45 +427,45 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   //
-  // const scaleDownElems = gsap.utils.toArray(".scaleDown");
-  // scaleDownElems.forEach((elem) => {
-  //   gsap.from(elem, {
-  //     opacity: 0,
-  //     scale: 0,
-  //     duration: 1,
-  //     ease: "power2.inOut",
-  //     scrollTrigger: {
-  //       trigger: elem,
-  //       toggleActions: "restart none none none",
-  //     },
-  //   });
-  // });
-  // gsap.from(".logo", {
-  //   scale: 0,
-  //   x: -100,
-  //   duration: 0.5,
-  //   ease: "back.inOut",
-  //   stagger: "0.2",
-  // });
-  // gsap.from(".menu-link", {
-  //   opacity: 0,
-  //   y: 100,
-  //   duration: 0.3,
-  //   ease: "back.inOut",
-  //   stagger: "0.2",
-  // });
+  const scaleDownElems = gsap.utils.toArray(".scaleDown");
+  scaleDownElems.forEach((elem) => {
+    gsap.from(elem, {
+      opacity: 0,
+      scale: 0,
+      duration: 1,
+      ease: "power2.inOut",
+      scrollTrigger: {
+        trigger: elem,
+        toggleActions: "restart none none none",
+      },
+    });
+  });
+  gsap.from(".logo", {
+    scale: 0,
+    x: -100,
+    duration: 0.5,
+    ease: "back.inOut",
+    stagger: "0.2",
+  });
+  gsap.from(".menu-link", {
+    opacity: 0,
+    y: 100,
+    duration: 0.3,
+    ease: "back.inOut",
+    stagger: "0.2",
+  });
 
-  // gsap.from(".feature", {
-  //   opacity: 0,
-  //   y: 100,
-  //   duration: 0.3,
-  //   ease: "back.inOut",
-  //   stagger: "0.2",
-  //   scrollTrigger: {
-  //     trigger: ".feature",
-  //     toggleActions: "restart none none none",
-  //   },
-  // });
+  gsap.from(".feature", {
+    opacity: 0,
+    y: 100,
+    duration: 0.3,
+    ease: "back.inOut",
+    stagger: "0.2",
+    scrollTrigger: {
+      trigger: ".feature",
+      toggleActions: "restart none none none",
+    },
+  });
 
   // //
   // gsap.from(".cta-btn", {
